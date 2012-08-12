@@ -4,6 +4,8 @@
 #import <OpenGL/gl.h>
 #import "MainHooks.h"
 
+#include "Log.h"
+
 NSOpenGLContext* glcontext = nil;
 
 int main(int argc, char *argv[])
@@ -11,6 +13,8 @@ int main(int argc, char *argv[])
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init]; // first global one, required or we leak 
   NSApplication* app = [NSApplication sharedApplication];     // singleton
   LEAppDelegate* appDelegate = [[LEAppDelegate alloc] init];  // required for some important callbacks
+
+  LLOG("hello");
 
   // setup very basic menu so we can at least CMD-Q quit
   NSMenu *menu;

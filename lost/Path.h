@@ -47,4 +47,6 @@ namespace lost
   bool create_directories(const Path& path); 
 }
 
+lost::StringStream& operator<<(lost::StringStream& stream, const lost::Path& p);
+
 #endif
