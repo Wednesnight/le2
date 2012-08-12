@@ -20,6 +20,10 @@
 		EACD24A115D81FF600453F75 /* StringStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD249F15D81FF600453F75 /* StringStream.cpp */; };
 		EACD24A315D825A600453F75 /* PlatformMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD24A215D825A600453F75 /* PlatformMac.mm */; };
 		EACD24A715D8338800453F75 /* Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD24A515D8333100453F75 /* Data.cpp */; };
+		EACD24AE15D852AC00453F75 /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD24AD15D852AC00453F75 /* Color.cpp */; };
+		EACD24B015D852B300453F75 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD24AF15D852B300453F75 /* Rect.cpp */; };
+		EACD24B315D8531200453F75 /* Vec2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD24B115D8531200453F75 /* Vec2.cpp */; };
+		EACD24B415D8531B00453F75 /* Bitmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD24A815D851AB00453F75 /* Bitmap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,16 @@
 		EACD24A415D8328900453F75 /* shared_ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shared_ptr.h; sourceTree = "<group>"; };
 		EACD24A515D8333100453F75 /* Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Data.cpp; sourceTree = "<group>"; };
 		EACD24A615D8333100453F75 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		EACD24A815D851AB00453F75 /* Bitmap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bitmap.cpp; sourceTree = "<group>"; };
+		EACD24A915D851AB00453F75 /* Bitmap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bitmap.h; sourceTree = "<group>"; };
+		EACD24AA15D8523300453F75 /* Disallow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Disallow.h; sourceTree = "<group>"; };
+		EACD24AB15D8528400453F75 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		EACD24AC15D8528A00453F75 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		EACD24AD15D852AC00453F75 /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
+		EACD24AF15D852B300453F75 /* Rect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
+		EACD24B115D8531200453F75 /* Vec2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec2.cpp; sourceTree = "<group>"; };
+		EACD24B215D8531200453F75 /* Vec2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec2.h; sourceTree = "<group>"; };
+		EACD24B515D853D300453F75 /* lmath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lmath.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +168,14 @@
 		EACD248C15D81A6800453F75 /* lost */ = {
 			isa = PBXGroup;
 			children = (
+				EACD24A815D851AB00453F75 /* Bitmap.cpp */,
+				EACD24A915D851AB00453F75 /* Bitmap.h */,
+				EACD24AD15D852AC00453F75 /* Color.cpp */,
+				EACD24AB15D8528400453F75 /* Color.h */,
 				EACD24A515D8333100453F75 /* Data.cpp */,
 				EACD24A615D8333100453F75 /* Data.h */,
+				EACD24AA15D8523300453F75 /* Disallow.h */,
+				EACD24B515D853D300453F75 /* lmath.h */,
 				EACD248D15D81A6800453F75 /* Log.cpp */,
 				EACD248E15D81A6800453F75 /* Log.h */,
 				EACD248F15D81A6800453F75 /* MainHooks.cpp */,
@@ -169,10 +189,14 @@
 				EACD249B15D81E4400453F75 /* PlatformTime.h */,
 				EACD249C15D81E4400453F75 /* PlatformType.h */,
 				EACD249315D81A6800453F75 /* prefix-shared.h */,
+				EACD24AF15D852B300453F75 /* Rect.cpp */,
+				EACD24AC15D8528A00453F75 /* Rect.h */,
 				EACD24A415D8328900453F75 /* shared_ptr.h */,
 				EACD249F15D81FF600453F75 /* StringStream.cpp */,
 				EACD24A015D81FF600453F75 /* StringStream.h */,
 				EACD249715D81B3E00453F75 /* types.h */,
+				EACD24B115D8531200453F75 /* Vec2.cpp */,
+				EACD24B215D8531200453F75 /* Vec2.h */,
 			);
 			name = lost;
 			path = ../lost;
@@ -250,6 +274,10 @@
 				EACD24A115D81FF600453F75 /* StringStream.cpp in Sources */,
 				EACD24A315D825A600453F75 /* PlatformMac.mm in Sources */,
 				EACD24A715D8338800453F75 /* Data.cpp in Sources */,
+				EACD24AE15D852AC00453F75 /* Color.cpp in Sources */,
+				EACD24B015D852B300453F75 /* Rect.cpp in Sources */,
+				EACD24B315D8531200453F75 /* Vec2.cpp in Sources */,
+				EACD24B415D8531B00453F75 /* Bitmap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

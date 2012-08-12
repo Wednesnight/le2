@@ -38,4 +38,6 @@ throw std::runtime_error(os.str().c_str()); \
 
 #endif
 
+#include <OpenGL/gl.h>
+
 #endif
