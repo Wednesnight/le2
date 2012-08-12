@@ -11,18 +11,28 @@
 		EACD245A15D7E53300453F75 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD245915D7E53300453F75 /* OpenGL.framework */; };
 		EACD245C15D7E7E000453F75 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD245B15D7E7E000453F75 /* main.mm */; };
 		EACD245F15D7E7F700453F75 /* LEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD245E15D7E7F700453F75 /* LEAppDelegate.m */; };
+		EACD246215D7EEFD00453F75 /* LEGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD246115D7EEF400453F75 /* LEGLView.mm */; };
+		EACD246515D7EF1700453F75 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD246315D7EF1700453F75 /* Log.cpp */; };
+		EACD246815D7EF2100453F75 /* MainHooks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD246615D7EF2100453F75 /* MainHooks.cpp */; };
+		EACD246E15D7EFEA00453F75 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD246D15D7EFEA00453F75 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EACD243315D7E48D00453F75 /* LostEngine2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostEngine2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACD243715D7E48D00453F75 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		EACD243C15D7E48D00453F75 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostEngine2-Info.plist"; sourceTree = "<group>"; };
 		EACD244515D7E48D00453F75 /* LostEngine2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LostEngine2-Prefix.pch"; sourceTree = "<group>"; };
 		EACD245915D7E53300453F75 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EACD245B15D7E7E000453F75 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = SOURCE_ROOT; };
 		EACD245D15D7E7F700453F75 /* LEAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		EACD245E15D7E7F700453F75 /* LEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		EACD246015D7EEF400453F75 /* LEGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGLView.h; sourceTree = SOURCE_ROOT; };
+		EACD246115D7EEF400453F75 /* LEGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LEGLView.mm; sourceTree = SOURCE_ROOT; };
+		EACD246315D7EF1700453F75 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Log.cpp; path = ../Log.cpp; sourceTree = "<group>"; };
+		EACD246415D7EF1700453F75 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = ../Log.h; sourceTree = "<group>"; };
+		EACD246615D7EF2100453F75 /* MainHooks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainHooks.cpp; path = ../MainHooks.cpp; sourceTree = "<group>"; };
+		EACD246715D7EF2100453F75 /* MainHooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainHooks.h; path = ../MainHooks.h; sourceTree = "<group>"; };
+		EACD246D15D7EFEA00453F75 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACD246E15D7EFEA00453F75 /* QuartzCore.framework in Frameworks */,
 				EACD245A15D7E53300453F75 /* OpenGL.framework in Frameworks */,
 				EACD243815D7E48D00453F75 /* Cocoa.framework in Frameworks */,
 			);
@@ -41,7 +52,10 @@
 		EACD242815D7E48D00453F75 = {
 			isa = PBXGroup;
 			children = (
-				EACD245915D7E53300453F75 /* OpenGL.framework */,
+				EACD246315D7EF1700453F75 /* Log.cpp */,
+				EACD246415D7EF1700453F75 /* Log.h */,
+				EACD246615D7EF2100453F75 /* MainHooks.cpp */,
+				EACD246715D7EF2100453F75 /* MainHooks.h */,
 				EACD243D15D7E48D00453F75 /* mac */,
 				EACD243615D7E48D00453F75 /* Frameworks */,
 				EACD243415D7E48D00453F75 /* Products */,
@@ -59,8 +73,9 @@
 		EACD243615D7E48D00453F75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EACD243C15D7E48D00453F75 /* Foundation.framework */,
 				EACD243715D7E48D00453F75 /* Cocoa.framework */,
+				EACD245915D7E53300453F75 /* OpenGL.framework */,
+				EACD246D15D7EFEA00453F75 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -70,6 +85,8 @@
 			children = (
 				EACD245D15D7E7F700453F75 /* LEAppDelegate.h */,
 				EACD245E15D7E7F700453F75 /* LEAppDelegate.m */,
+				EACD246015D7EEF400453F75 /* LEGLView.h */,
+				EACD246115D7EEF400453F75 /* LEGLView.mm */,
 				EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */,
 				EACD244515D7E48D00453F75 /* LostEngine2-Prefix.pch */,
 				EACD245B15D7E7E000453F75 /* main.mm */,
@@ -142,6 +159,9 @@
 			files = (
 				EACD245C15D7E7E000453F75 /* main.mm in Sources */,
 				EACD245F15D7E7F700453F75 /* LEAppDelegate.m in Sources */,
+				EACD246215D7EEFD00453F75 /* LEGLView.mm in Sources */,
+				EACD246515D7EF1700453F75 /* Log.cpp in Sources */,
+				EACD246815D7EF2100453F75 /* MainHooks.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
