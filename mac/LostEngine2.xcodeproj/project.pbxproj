@@ -57,6 +57,7 @@
 				EACD246615D7EF2100453F75 /* MainHooks.cpp */,
 				EACD246715D7EF2100453F75 /* MainHooks.h */,
 				EACD243D15D7E48D00453F75 /* mac */,
+				EACD246F15D7F35C00453F75 /* thirdparty */,
 				EACD243615D7E48D00453F75 /* Frameworks */,
 				EACD243415D7E48D00453F75 /* Products */,
 			);
@@ -93,6 +94,13 @@
 			);
 			name = mac;
 			path = LostEngine2;
+			sourceTree = "<group>";
+		};
+		EACD246F15D7F35C00453F75 /* thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = thirdparty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
