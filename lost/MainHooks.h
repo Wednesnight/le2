@@ -1,5 +1,5 @@
-#ifndef LE2_MAINHOOKS_H
-#define LE2_MAINHOOKS_H
+#ifndef LOST_MAINHOOKS_H
+#define LOST_MAINHOOKS_H
 
 namespace lost
 {
