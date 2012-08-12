@@ -1,0 +1,246 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EACD243815D7E48D00453F75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD243715D7E48D00453F75 /* Cocoa.framework */; };
+		EACD245A15D7E53300453F75 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD245915D7E53300453F75 /* OpenGL.framework */; };
+		EACD245C15D7E7E000453F75 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD245B15D7E7E000453F75 /* main.mm */; };
+		EACD245F15D7E7F700453F75 /* LEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD245E15D7E7F700453F75 /* LEAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EACD243315D7E48D00453F75 /* LostEngine2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostEngine2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACD243715D7E48D00453F75 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EACD243C15D7E48D00453F75 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostEngine2-Info.plist"; sourceTree = "<group>"; };
+		EACD244515D7E48D00453F75 /* LostEngine2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LostEngine2-Prefix.pch"; sourceTree = "<group>"; };
+		EACD245915D7E53300453F75 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		EACD245B15D7E7E000453F75 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = SOURCE_ROOT; };
+		EACD245D15D7E7F700453F75 /* LEAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		EACD245E15D7E7F700453F75 /* LEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEAppDelegate.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EACD243015D7E48D00453F75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACD245A15D7E53300453F75 /* OpenGL.framework in Frameworks */,
+				EACD243815D7E48D00453F75 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EACD242815D7E48D00453F75 = {
+			isa = PBXGroup;
+			children = (
+				EACD245915D7E53300453F75 /* OpenGL.framework */,
+				EACD243D15D7E48D00453F75 /* mac */,
+				EACD243615D7E48D00453F75 /* Frameworks */,
+				EACD243415D7E48D00453F75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EACD243415D7E48D00453F75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EACD243315D7E48D00453F75 /* LostEngine2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EACD243615D7E48D00453F75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EACD243C15D7E48D00453F75 /* Foundation.framework */,
+				EACD243715D7E48D00453F75 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EACD243D15D7E48D00453F75 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				EACD245D15D7E7F700453F75 /* LEAppDelegate.h */,
+				EACD245E15D7E7F700453F75 /* LEAppDelegate.m */,
+				EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */,
+				EACD244515D7E48D00453F75 /* LostEngine2-Prefix.pch */,
+				EACD245B15D7E7E000453F75 /* main.mm */,
+			);
+			name = mac;
+			path = LostEngine2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EACD243215D7E48D00453F75 /* LostEngine2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EACD245115D7E48D00453F75 /* Build configuration list for PBXNativeTarget "LostEngine2" */;
+			buildPhases = (
+				EACD242F15D7E48D00453F75 /* Sources */,
+				EACD243015D7E48D00453F75 /* Frameworks */,
+				EACD243115D7E48D00453F75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LostEngine2;
+			productName = LostEngine2;
+			productReference = EACD243315D7E48D00453F75 /* LostEngine2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EACD242A15D7E48D00453F75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LE;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Tony Kostanjsek";
+			};
+			buildConfigurationList = EACD242D15D7E48D00453F75 /* Build configuration list for PBXProject "LostEngine2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EACD242815D7E48D00453F75;
+			productRefGroup = EACD243415D7E48D00453F75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EACD243215D7E48D00453F75 /* LostEngine2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EACD243115D7E48D00453F75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EACD242F15D7E48D00453F75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACD245C15D7E7E000453F75 /* main.mm in Sources */,
+				EACD245F15D7E7F700453F75 /* LEAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EACD244F15D7E48D00453F75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EACD245015D7E48D00453F75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EACD245215D7E48D00453F75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LostEngine2-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/LostEngine2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EACD245315D7E48D00453F75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LostEngine2-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/LostEngine2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EACD242D15D7E48D00453F75 /* Build configuration list for PBXProject "LostEngine2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACD244F15D7E48D00453F75 /* Debug */,
+				EACD245015D7E48D00453F75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EACD245115D7E48D00453F75 /* Build configuration list for PBXNativeTarget "LostEngine2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACD245215D7E48D00453F75 /* Debug */,
+				EACD245315D7E48D00453F75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EACD242A15D7E48D00453F75 /* Project object */;
+}
