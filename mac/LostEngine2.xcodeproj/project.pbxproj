@@ -15,6 +15,7 @@
 		EACD246515D7EF1700453F75 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD246315D7EF1700453F75 /* Log.cpp */; };
 		EACD246815D7EF2100453F75 /* MainHooks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD246615D7EF2100453F75 /* MainHooks.cpp */; };
 		EACD246E15D7EFEA00453F75 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD246D15D7EFEA00453F75 /* QuartzCore.framework */; };
+		EACD247915D7F82100453F75 /* stb_image.c in Sources */ = {isa = PBXBuildFile; fileRef = EACD247115D7F82100453F75 /* stb_image.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,13 @@
 		EACD246615D7EF2100453F75 /* MainHooks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainHooks.cpp; path = ../MainHooks.cpp; sourceTree = "<group>"; };
 		EACD246715D7EF2100453F75 /* MainHooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainHooks.h; path = ../MainHooks.h; sourceTree = "<group>"; };
 		EACD246D15D7EFEA00453F75 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EACD247015D7F82100453F75 /* stb_image_write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_image_write.h; path = ../thirdparty/stb_image_write.h; sourceTree = "<group>"; };
+		EACD247115D7F82100453F75 /* stb_image.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stb_image.c; path = ../thirdparty/stb_image.c; sourceTree = "<group>"; };
+		EACD247215D7F82100453F75 /* stb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_truetype.h; path = ../thirdparty/stb_truetype.h; sourceTree = "<group>"; };
+		EACD247515D7F82100453F75 /* checked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked.h; sourceTree = "<group>"; };
+		EACD247615D7F82100453F75 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		EACD247715D7F82100453F75 /* unchecked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unchecked.h; sourceTree = "<group>"; };
+		EACD247815D7F82100453F75 /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +107,32 @@
 		EACD246F15D7F35C00453F75 /* thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				EACD247015D7F82100453F75 /* stb_image_write.h */,
+				EACD247115D7F82100453F75 /* stb_image.c */,
+				EACD247215D7F82100453F75 /* stb_truetype.h */,
+				EACD247315D7F82100453F75 /* utfcpp */,
 			);
 			name = thirdparty;
+			sourceTree = "<group>";
+		};
+		EACD247315D7F82100453F75 /* utfcpp */ = {
+			isa = PBXGroup;
+			children = (
+				EACD247415D7F82100453F75 /* utf8 */,
+				EACD247815D7F82100453F75 /* utf8.h */,
+			);
+			name = utfcpp;
+			path = ../thirdparty/utfcpp;
+			sourceTree = "<group>";
+		};
+		EACD247415D7F82100453F75 /* utf8 */ = {
+			isa = PBXGroup;
+			children = (
+				EACD247515D7F82100453F75 /* checked.h */,
+				EACD247615D7F82100453F75 /* core.h */,
+				EACD247715D7F82100453F75 /* unchecked.h */,
+			);
+			path = utf8;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +202,7 @@
 				EACD246215D7EEFD00453F75 /* LEGLView.mm in Sources */,
 				EACD246515D7EF1700453F75 /* Log.cpp in Sources */,
 				EACD246815D7EF2100453F75 /* MainHooks.cpp in Sources */,
+				EACD247915D7F82100453F75 /* stb_image.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
