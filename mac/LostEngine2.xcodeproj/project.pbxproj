@@ -19,6 +19,7 @@
 		EACD249615D81A6800453F75 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD249115D81A6800453F75 /* Path.cpp */; };
 		EACD24A115D81FF600453F75 /* StringStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD249F15D81FF600453F75 /* StringStream.cpp */; };
 		EACD24A315D825A600453F75 /* PlatformMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD24A215D825A600453F75 /* PlatformMac.mm */; };
+		EACD24A715D8338800453F75 /* Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD24A515D8333100453F75 /* Data.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		EACD24A015D81FF600453F75 /* StringStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringStream.h; sourceTree = "<group>"; };
 		EACD24A215D825A600453F75 /* PlatformMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlatformMac.mm; sourceTree = "<group>"; };
 		EACD24A415D8328900453F75 /* shared_ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shared_ptr.h; sourceTree = "<group>"; };
+		EACD24A515D8333100453F75 /* Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Data.cpp; sourceTree = "<group>"; };
+		EACD24A615D8333100453F75 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 		EACD248C15D81A6800453F75 /* lost */ = {
 			isa = PBXGroup;
 			children = (
+				EACD24A515D8333100453F75 /* Data.cpp */,
+				EACD24A615D8333100453F75 /* Data.h */,
 				EACD248D15D81A6800453F75 /* Log.cpp */,
 				EACD248E15D81A6800453F75 /* Log.h */,
 				EACD248F15D81A6800453F75 /* MainHooks.cpp */,
@@ -244,6 +249,7 @@
 				EACD249615D81A6800453F75 /* Path.cpp in Sources */,
 				EACD24A115D81FF600453F75 /* StringStream.cpp in Sources */,
 				EACD24A315D825A600453F75 /* PlatformMac.mm in Sources */,
+				EACD24A715D8338800453F75 /* Data.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
