@@ -56,6 +56,7 @@
 		EACD249F15D81FF600453F75 /* StringStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringStream.cpp; sourceTree = "<group>"; };
 		EACD24A015D81FF600453F75 /* StringStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringStream.h; sourceTree = "<group>"; };
 		EACD24A215D825A600453F75 /* PlatformMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlatformMac.mm; sourceTree = "<group>"; };
+		EACD24A415D8328900453F75 /* shared_ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shared_ptr.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +164,7 @@
 				EACD249B15D81E4400453F75 /* PlatformTime.h */,
 				EACD249C15D81E4400453F75 /* PlatformType.h */,
 				EACD249315D81A6800453F75 /* prefix-shared.h */,
+				EACD24A415D8328900453F75 /* shared_ptr.h */,
 				EACD249F15D81FF600453F75 /* StringStream.cpp */,
 				EACD24A015D81FF600453F75 /* StringStream.h */,
 				EACD249715D81B3E00453F75 /* types.h */,
