@@ -1,6 +1,7 @@
 #include "MainHooks.h"
 #include "Log.h"
 #include "lost/Bundle.h"
+#include "lost/Bitmap.h"
 
 namespace lost 
 {
@@ -8,7 +9,8 @@ namespace lost
 void leStartup() 
 {
   ResourceBundle rb;
-  DataPtr data = rb.load("test.jpg");
+  DataPtr data = rb.load("rings.png");
+  Bitmap bmp(data);
 }
 
 void leUpdate()
