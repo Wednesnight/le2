@@ -7,6 +7,9 @@
 namespace lost
 {
 
+/** Read only directory.
+ * Might impose/require a certain file system layout and provide helper functions to deal with it.
+ */
 struct Bundle
 {
   Bundle();
@@ -19,6 +22,12 @@ struct Bundle
 };
 
 
+/** Application resource Bundle.
+ * Points to the applications resources for easy access. 
+ * Mac: .app/Contents/Resources
+ * iOS: .app/
+ * Windows: executable directory
+ */
 struct ResourceBundle : Bundle
 {
   ResourceBundle();

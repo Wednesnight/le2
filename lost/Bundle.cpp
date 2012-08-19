@@ -23,16 +23,18 @@ DataPtr Bundle::load(const Path& relativePath) const
   
   Path absolutePath = _path / relativePath;
   string spath = absolutePath.string();
-  DOUT("LOADING: '"<<spath<<"'");
   FILE* file;
-  ASSERT(file = fopen(spath.c_str(), "rb"), "couldn't open file");
-  ASSERT(0 == fseek(file, 0, SEEK_END), "couldn't seek");
+  ASSERT(file = fopen(spath.c_str(), "rb"), "couldn't open file "<<spath);
+  ASSERT(0 == fseek(file, 0, SEEK_END), "couldn't seek "<<spath);
   fpos_t size;
-  ASSERT(0 == fgetpos(file, &size), "couldn't get file pos");
+  ASSERT(0 == fgetpos(file, &size), "couldn't get file pos "<<spath);
   result->bytes.reset(new char[size]);
-  ASSERT(0 == fseek(file, 0, SEEK_SET), "couldn't seek");
-  ASSERT(0 == fread(result->bytes.get(), size, 1, file), "couldn't read");
-  ASSERT(0 == fclose(file), "couldn't close"); 
+  result->size = size;
+  DOUT("'"<<absolutePath.file()<<"' [" << size << " bytes]");
+  ASSERT(0 == fseek(file, 0, SEEK_SET), "couldn't seek "<<spath);
+  fread(result->bytes.get(), size, 1, file);
+  ASSERT(0 == ferror(file), "couldn't read "<<spath);
+  ASSERT(0 == fclose(file), "couldn't close "<<spath); 
   return result;
 }
 
