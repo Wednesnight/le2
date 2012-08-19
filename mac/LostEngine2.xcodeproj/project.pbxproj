@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA90FCB715DEB2690071F358 /* Bundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA90FCB415DEAF9D0071F358 /* Bundle.cpp */; };
+		EA90FCBE15E14CBB0071F358 /* rings.png in Resources */ = {isa = PBXBuildFile; fileRef = EA90FCBD15E14CBB0071F358 /* rings.png */; };
 		EACD243815D7E48D00453F75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD243715D7E48D00453F75 /* Cocoa.framework */; };
 		EACD245A15D7E53300453F75 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD245915D7E53300453F75 /* OpenGL.framework */; };
 		EACD245C15D7E7E000453F75 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD245B15D7E7E000453F75 /* main.mm */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		EA90FCB415DEAF9D0071F358 /* Bundle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bundle.cpp; sourceTree = "<group>"; };
 		EA90FCB515DEAF9D0071F358 /* Bundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bundle.h; sourceTree = "<group>"; };
+		EA90FCBD15E14CBB0071F358 /* rings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rings.png; path = ../resources/rings.png; sourceTree = "<group>"; };
 		EACD243315D7E48D00453F75 /* LostEngine2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostEngine2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACD243715D7E48D00453F75 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostEngine2-Info.plist"; sourceTree = "<group>"; };
@@ -93,12 +95,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA90FCB815E141710071F358 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA90FCBD15E14CBB0071F358 /* rings.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		EACD242815D7E48D00453F75 = {
 			isa = PBXGroup;
 			children = (
 				EACD248C15D81A6800453F75 /* lost */,
 				EACD243D15D7E48D00453F75 /* mac */,
 				EACD246F15D7F35C00453F75 /* thirdparty */,
+				EA90FCB815E141710071F358 /* Resources */,
 				EACD243615D7E48D00453F75 /* Frameworks */,
 				EACD243415D7E48D00453F75 /* Products */,
 			);
@@ -259,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA90FCBE15E14CBB0071F358 /* rings.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
