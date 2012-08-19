@@ -3,6 +3,8 @@
 
 #include "lost/StringStream.h"
 #include "lost/Path.h"
+#include <assert.h>
+#include <stdlib.h>
 
 namespace lost
 {
@@ -19,5 +21,8 @@ lost::log(ss.str()); \
 #define IOUT(s) LLOG("INFO: " << s);
 #define WOUT(s) LLOG("WARNING: " << s);
 #define EOUT(s) LLOG("ERROR: " << s);
+
+
+#define ASSERT(cond, ms) { bool LOST_ASSERT_COND = (cond); if(!LOST_ASSERT_COND) {EOUT(ms << " " << string(#cond)); abort();} }
 
 #endif

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA90FCB715DEB2690071F358 /* Bundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA90FCB415DEAF9D0071F358 /* Bundle.cpp */; };
 		EACD243815D7E48D00453F75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD243715D7E48D00453F75 /* Cocoa.framework */; };
 		EACD245A15D7E53300453F75 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD245915D7E53300453F75 /* OpenGL.framework */; };
 		EACD245C15D7E7E000453F75 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD245B15D7E7E000453F75 /* main.mm */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA90FCB415DEAF9D0071F358 /* Bundle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bundle.cpp; sourceTree = "<group>"; };
+		EA90FCB515DEAF9D0071F358 /* Bundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bundle.h; sourceTree = "<group>"; };
 		EACD243315D7E48D00453F75 /* LostEngine2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostEngine2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACD243715D7E48D00453F75 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostEngine2-Info.plist"; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 			children = (
 				EACD24A815D851AB00453F75 /* Bitmap.cpp */,
 				EACD24A915D851AB00453F75 /* Bitmap.h */,
+				EA90FCB415DEAF9D0071F358 /* Bundle.cpp */,
+				EA90FCB515DEAF9D0071F358 /* Bundle.h */,
 				EACD24AD15D852AC00453F75 /* Color.cpp */,
 				EACD24AB15D8528400453F75 /* Color.h */,
 				EACD24A515D8333100453F75 /* Data.cpp */,
@@ -278,6 +283,7 @@
 				EACD24B015D852B300453F75 /* Rect.cpp in Sources */,
 				EACD24B315D8531200453F75 /* Vec2.cpp in Sources */,
 				EACD24B415D8531B00453F75 /* Bitmap.cpp in Sources */,
+				EA90FCB715DEB2690071F358 /* Bundle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

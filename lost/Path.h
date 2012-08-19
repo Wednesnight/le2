@@ -22,6 +22,7 @@ namespace lost
   struct Path
   {
     Path();
+    Path(const char* p);
     Path(const string& sp);
     virtual ~Path();
 

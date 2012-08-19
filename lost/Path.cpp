@@ -30,6 +30,11 @@ namespace lost
 
   Path::Path() {}
 
+  Path::Path(const char* p)
+  : path(p)
+  {
+  }
+
   Path::Path(const lost::string& sp)
   : path(sp)
   {
