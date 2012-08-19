@@ -98,7 +98,6 @@ namespace lost
               GLenum format);
 
     /** attempts to interpret a chunk ofmemory as a bitmap, with the help of the underlying image library.
-     * An exception is thrown if an error occurs.
      */
     void init(const DataPtr& inData);
     
@@ -137,8 +136,6 @@ namespace lost
      * The file is created or overwritten.
      *
      * @param inFullPathname full path name of the file to write to.
-     *
-     * @throws if the file couldn't be written.
      */
     void write(const string inFullPathname);
 

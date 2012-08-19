@@ -25,14 +25,6 @@
 #endif
 
 #include "lost/StringStream.h"
-
-#define THROW_RTE(s) \
-{ \
-lost::StringStream os; \
-os << s; \
-throw std::runtime_error(os.str().c_str()); \
-}
-
 #include "lost/shared_ptr.h"
 #include "lost/Platform.h"
 

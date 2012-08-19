@@ -109,7 +109,7 @@ namespace lost
 
 	  FILE *l_filecheck;
 	  if (fopen_s(&l_filecheck, result.string().c_str(), "r") == 0) fclose( l_filecheck );
-	    else throw std::runtime_error(string("Couldn't find resource '"+ result.string() +"', does it exist in your resources directory? Is the spelling correct?").c_str());
+	    else ASSERT(false, string("Couldn't find resource '"+ result.string() +"', does it exist in your resources directory? Is the spelling correct?").c_str());
 
 	  return result;
 	}
@@ -137,7 +137,7 @@ namespace lost
 
 	  FILE *l_filecheck;
 	  if (fopen_s(&l_filecheck, result.string().c_str(), "r") == 0) fclose( l_filecheck );
-	    else throw std::runtime_error(string("Couldn't find resource '"+ result.string() +"', does it exist in your user data directory? Is the spelling correct?").c_str());
+	    else ASSERT(false, string("Couldn't find resource '"+ result.string() +"', does it exist in your user data directory? Is the spelling correct?").c_str());
 
 	  return result;
 	}

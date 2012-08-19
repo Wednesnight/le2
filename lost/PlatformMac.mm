@@ -68,10 +68,7 @@ namespace lost
 	  CFBundleRef mainBundle = CFBundleGetMainBundle();
 	  CFURLRef resourceDirURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
 
-	  if(!resourceDirURL)
-	  {
-	    throw std::runtime_error( "Couldn't find resource directory, does it exist?" );
-	  }
+	  ASSERT(resourceDirURL, "Couldn't find resource directory, does it exist?");
 
 	  const unsigned long bufsize = 4096;
 	  UInt8 buffer[bufsize];
@@ -81,10 +78,7 @@ namespace lost
 	                                                        buffer,
 	                                                        bufsize );
   
-	  if(!convresult)
-	  {
-	    throw std::runtime_error("couldn't convert CFURL to path for resource dir");
-	  }
+	  ASSERT(convresult, "couldn't convert CFURL to path for resource dir");
   
 	  string result(reinterpret_cast<char*>(buffer));
 	  CFRelease(resourceDirURL);

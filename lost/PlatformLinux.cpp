@@ -62,7 +62,7 @@ namespace lost
 	  if (0 != stat(path.string().c_str(), &info) || !S_ISDIR(info.st_mode)) {
 	    // There's no /proc filesystem, we can't find out a lot about our
 	    // application.
-	    throw std::runtime_error("Could not find /proc filesystem!");
+	    ASSERT(false, "Could not find /proc filesystem!");
 	  }
 
 
@@ -80,7 +80,7 @@ namespace lost
 	      sizeof(pathbuf));
 
 	  if (-1 == pathsize) {
-	    throw std::runtime_error("Could not determine application path!");
+	    ASSERT(false, "Could not determine application path!");
 	  }
 
 	  return string(pathbuf, pathsize);
@@ -97,7 +97,7 @@ namespace lost
 
 	  FILE *l_filecheck = fopen(result.string().c_str(), "r");
 	  if (l_filecheck != NULL) fclose(l_filecheck);
-	    else throw runtime_error(string("Couldn't find resource '"+ result.string() +"', does it exist in your resources directory? Is the spelling correct?").c_str());
+	    else ASSERT(false, string("Couldn't find resource '"+ result.string() +"', does it exist in your resources directory? Is the spelling correct?").c_str());
 
 	  return result;
 	}
@@ -134,7 +134,7 @@ namespace lost
 
 	  FILE *l_filecheck = fopen(result.string().c_str(), "r");
 	  if (l_filecheck != NULL) fclose(l_filecheck);
-	    else throw runtime_error(string("Couldn't find resource '"+ result.string() +"', does it exist in your resources directory? Is the spelling correct?").c_str());
+	    else ASSERT(false, string("Couldn't find resource '"+ result.string() +"', does it exist in your resources directory? Is the spelling correct?").c_str());
 
 	  return result;
 	}
@@ -153,14 +153,14 @@ namespace lost
 	bool setClipboardString(string const & str)
 	{
 	  // TODO
-	  throw runtime_error("not implemented");
+	  ASSERT(false, "not implemented");
 	  return false;
 	}
 
 	string getClipboardString()
 	{
 	  // TODO
-	  throw runtime_error("not implemented");
+	  ASSERT(false, "not implemented");
 	  return "";
 	}
 }

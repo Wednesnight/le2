@@ -150,8 +150,7 @@ void Bitmap::copyPixel(uint8_t* dest,
         case GL_RGBA:dest[0]=src[0];dest[1]=src[1];dest[2]=src[2];dest[3]=src[3];break;
         case GL_RGB:dest[0]=src[0];dest[1]=src[1];dest[2]=src[2];dest[3]=255;break;
         case GL_ALPHA:dest[0]=src[0];dest[1]=src[0];dest[2]=src[0];dest[3]=src[0];break;
-        default:
-          THROW_RTE("can't copy pixel from source with components: " << srcComponents);
+        default:ASSERT(false, "can't copy pixel from source with components: " << srcComponents);
       }
       break;
     case GL_RGB:
@@ -160,8 +159,7 @@ void Bitmap::copyPixel(uint8_t* dest,
         case GL_RGBA:dest[0]=src[0];dest[1]=src[1];dest[2]=src[2];break;
         case GL_RGB:dest[0]=src[0];dest[1]=src[1];dest[2]=src[2];break;
         case GL_ALPHA:dest[0]=src[0];dest[1]=src[0];dest[2]=src[0];break;
-        default:
-          THROW_RTE("can't copy pixel from source with components: " << srcComponents);
+        default:ASSERT(false, "can't copy pixel from source with components: " << srcComponents);
       }
       break;
     case GL_ALPHA:
@@ -170,12 +168,10 @@ void Bitmap::copyPixel(uint8_t* dest,
         case GL_RGBA:dest[0]=src[3];break;
         case GL_RGB:dest[0]=255;break;
         case GL_ALPHA:dest[0]=src[0];break;
-        default:
-          THROW_RTE("can't copy pixel from source with components: " << srcComponents);
+        default:ASSERT(false, "can't copy pixel from source with components: " << srcComponents);
       }
       break;
-    default:
-      THROW_RTE("can't copy pixel to destination with components: " << destComponents);
+    default:ASSERT(false, "can't copy pixel to destination with components: " << destComponents);
   }
 }
 
@@ -187,8 +183,7 @@ uint32_t Bitmap::bytesPerPixelFromComponents(GLenum components)
     case GL_ALPHA:result = 1;break;
     case GL_RGB:result = 3;break;
     case GL_RGBA:result = 4;break;
-    default:
-      THROW_RTE("can't determine bytes per pixel from components: " << components);
+    default:ASSERT(false, "can't determine bytes per pixel from components: " << components);
   }
   return result;
 }
@@ -201,18 +196,13 @@ void Bitmap::init(const DataPtr& inData)
   data = stbi_load_from_memory(reinterpret_cast<const stbi_uc*>(inData->bytes.get()), inData->size, &w, &h, &bytesPerPixel, 0);
   width = w;
   height = h;
-  if(data == NULL)
-  {
-    // FIXME: stbi_failure_reason is not threadsafe
-    throw std::runtime_error("couldn't init image from memory: "+ std::string(stbi_failure_reason()));
-  }
+  ASSERT(data, "couldn't init image from memory: "<<std::string(stbi_failure_reason()));
 
   switch(bytesPerPixel)
   {
     case 3:format = GL_RGB;break;
     case 4:format = GL_RGBA;break;
-    default:
-      THROW_RTE("couldn't init image, don't know what to do with bytesPerPixel: " << bytesPerPixel);
+    default:ASSERT(false, "couldn't init image, don't know what to do with bytesPerPixel: " << bytesPerPixel);
   }
   loaded = true;
 }
@@ -225,8 +215,7 @@ void Bitmap::clear(const Color& inColor)
     case 1:clearA(inColor);break;
     case 3:clearRGB(inColor);break;
     case 4:clearRGBA(inColor);break;
-    default:
-      THROW_RTE("couldn't clear image with bpp: " << bpp);
+    default:ASSERT(false, "couldn't clear image with bpp: " << bpp);
   }
 }
 
@@ -280,7 +269,7 @@ void Bitmap::write(const string inFullPathname)
 {
   if(!stbi_write_tga(inFullPathname.c_str(), width, height, bytesPerPixelFromComponents(format), data))
   {
-    throw std::runtime_error("screenshot save failed");
+    ASSERT(false, "screenshot save failed");
   }
 }
 
