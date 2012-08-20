@@ -25,7 +25,7 @@ namespace lost
   struct Data
   {
     lost::shared_array<char> bytes;
-    u32          size;
+    s64          size;
     
     Data();
     Data(const string& data);

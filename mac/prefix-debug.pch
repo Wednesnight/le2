@@ -1,0 +1,6 @@
+#define LOST_GL_DEBUG
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+#endif
+#include "lost/prefix-shared.h"
+

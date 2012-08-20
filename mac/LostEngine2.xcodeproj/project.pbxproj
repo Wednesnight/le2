@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EA90FCB715DEB2690071F358 /* Bundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA90FCB415DEAF9D0071F358 /* Bundle.cpp */; };
 		EA90FCBE15E14CBB0071F358 /* rings.png in Resources */ = {isa = PBXBuildFile; fileRef = EA90FCBD15E14CBB0071F358 /* rings.png */; };
+		EA90FCC115E151BD0071F358 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA90FCBF15E151600071F358 /* Texture.cpp */; };
+		EA90FCC415E15C740071F358 /* lgl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA90FCC315E15C730071F358 /* lgl.cpp */; };
 		EACD243815D7E48D00453F75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD243715D7E48D00453F75 /* Cocoa.framework */; };
 		EACD245A15D7E53300453F75 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD245915D7E53300453F75 /* OpenGL.framework */; };
 		EACD245C15D7E7E000453F75 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD245B15D7E7E000453F75 /* main.mm */; };
@@ -29,9 +31,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA88BDD915E26FE9006D2B1D /* prefix-debug.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "prefix-debug.pch"; sourceTree = SOURCE_ROOT; };
+		EA88BDDA15E26FE9006D2B1D /* prefix-release.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "prefix-release.pch"; sourceTree = SOURCE_ROOT; };
 		EA90FCB415DEAF9D0071F358 /* Bundle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bundle.cpp; sourceTree = "<group>"; };
 		EA90FCB515DEAF9D0071F358 /* Bundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bundle.h; sourceTree = "<group>"; };
 		EA90FCBD15E14CBB0071F358 /* rings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rings.png; path = ../resources/rings.png; sourceTree = "<group>"; };
+		EA90FCBF15E151600071F358 /* Texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		EA90FCC015E151600071F358 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		EA90FCC215E15B4F0071F358 /* lgl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lgl.h; sourceTree = "<group>"; };
+		EA90FCC315E15C730071F358 /* lgl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lgl.cpp; sourceTree = "<group>"; };
 		EACD243315D7E48D00453F75 /* LostEngine2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostEngine2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACD243715D7E48D00453F75 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostEngine2-Info.plist"; sourceTree = "<group>"; };
@@ -142,6 +150,8 @@
 				EACD246115D7EEF400453F75 /* LEGLView.mm */,
 				EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */,
 				EACD244515D7E48D00453F75 /* LostEngine2-Prefix.pch */,
+				EA88BDD915E26FE9006D2B1D /* prefix-debug.pch */,
+				EA88BDDA15E26FE9006D2B1D /* prefix-release.pch */,
 				EACD245B15D7E7E000453F75 /* main.mm */,
 			);
 			name = mac;
@@ -191,6 +201,8 @@
 				EACD24A515D8333100453F75 /* Data.cpp */,
 				EACD24A615D8333100453F75 /* Data.h */,
 				EACD24AA15D8523300453F75 /* Disallow.h */,
+				EA90FCC315E15C730071F358 /* lgl.cpp */,
+				EA90FCC215E15B4F0071F358 /* lgl.h */,
 				EACD24B515D853D300453F75 /* lmath.h */,
 				EACD248D15D81A6800453F75 /* Log.cpp */,
 				EACD248E15D81A6800453F75 /* Log.h */,
@@ -210,6 +222,8 @@
 				EACD24A415D8328900453F75 /* shared_ptr.h */,
 				EACD249F15D81FF600453F75 /* StringStream.cpp */,
 				EACD24A015D81FF600453F75 /* StringStream.h */,
+				EA90FCBF15E151600071F358 /* Texture.cpp */,
+				EA90FCC015E151600071F358 /* Texture.h */,
 				EACD249715D81B3E00453F75 /* types.h */,
 				EACD24B115D8531200453F75 /* Vec2.cpp */,
 				EACD24B215D8531200453F75 /* Vec2.h */,
@@ -296,6 +310,8 @@
 				EACD24B315D8531200453F75 /* Vec2.cpp in Sources */,
 				EACD24B415D8531B00453F75 /* Bitmap.cpp in Sources */,
 				EA90FCB715DEB2690071F358 /* Bundle.cpp in Sources */,
+				EA90FCC115E151BD0071F358 /* Texture.cpp in Sources */,
+				EA90FCC415E15C740071F358 /* lgl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +372,7 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LostEngine2-Prefix.pch";
+				GCC_PREFIX_HEADER = "prefix-debug.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LostEngine2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -368,7 +384,7 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LostEngine2-Prefix.pch";
+				GCC_PREFIX_HEADER = "prefix-release.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LostEngine2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

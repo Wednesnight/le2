@@ -193,7 +193,7 @@ void Bitmap::init(const DataPtr& inData)
   destroy();
 //  DOUT("init image from memory: " << inFile->location);
   int bytesPerPixel, w, h;
-  data = stbi_load_from_memory(reinterpret_cast<const stbi_uc*>(inData->bytes.get()), inData->size, &w, &h, &bytesPerPixel, 0);
+  data = stbi_load_from_memory(reinterpret_cast<const stbi_uc*>(inData->bytes.get()), (s32)inData->size, &w, &h, &bytesPerPixel, 0);
   width = w;
   height = h;
   ASSERT(data, "couldn't init image from memory: "<<std::string(stbi_failure_reason()));
