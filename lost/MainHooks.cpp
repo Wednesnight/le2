@@ -2,6 +2,7 @@
 #include "Log.h"
 #include "lost/Bundle.h"
 #include "lost/Bitmap.h"
+#include "lost/Texture.h"
 
 namespace lost 
 {
@@ -10,7 +11,8 @@ void leStartup()
 {
   ResourceBundle rb;
   DataPtr data = rb.load("rings.png");
-  Bitmap bmp(data);
+  BitmapPtr bmp = Bitmap::create(data);
+	TexturePtr tex = Texture::create(bmp);
 }
 
 void leUpdate()
