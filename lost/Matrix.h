@@ -17,6 +17,8 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef LOST_MATRIX_H
 #define LOST_MATRIX_H
 
+#include "lost/Rect.h"
+
 namespace lost
 {
 struct Matrix;
