@@ -39,6 +39,10 @@
 		EACD24B015D852B300453F75 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD24AF15D852B300453F75 /* Rect.cpp */; };
 		EACD24B315D8531200453F75 /* Vec2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD24B115D8531200453F75 /* Vec2.cpp */; };
 		EACD24B415D8531B00453F75 /* Bitmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD24A815D851AB00453F75 /* Bitmap.cpp */; };
+		EAF0438715F7A88E0095549F /* HostBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945F0815F7A87B004EE290 /* HostBuffer.cpp */; };
+		EAF0438815F7A88E0095549F /* HybridBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945F0A15F7A87B004EE290 /* HybridBuffer.cpp */; };
+		EAF0438915F7A88E0095549F /* HybridIndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945F0C15F7A87B004EE290 /* HybridIndexBuffer.cpp */; };
+		EAF0438A15F7A88E0095549F /* HybridVertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945F0E15F7A87C004EE290 /* HybridVertexBuffer.cpp */; };
 		EAF87C7A15E903A900986F86 /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAF87C7815E903A900986F86 /* Buffer.cpp */; };
 		EAF87C7E15E903B800986F86 /* BufferLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAF87C7C15E903B800986F86 /* BufferLayout.cpp */; };
 /* End PBXBuildFile section */
@@ -77,6 +81,14 @@
 		EA945F0215F7A430004EE290 /* VertexShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexShader.h; sourceTree = "<group>"; };
 		EA945F0315F7A43A004EE290 /* FragmentShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FragmentShader.cpp; sourceTree = "<group>"; };
 		EA945F0415F7A43A004EE290 /* FragmentShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FragmentShader.h; sourceTree = "<group>"; };
+		EA945F0815F7A87B004EE290 /* HostBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HostBuffer.cpp; sourceTree = "<group>"; };
+		EA945F0915F7A87B004EE290 /* HostBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HostBuffer.h; sourceTree = "<group>"; };
+		EA945F0A15F7A87B004EE290 /* HybridBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HybridBuffer.cpp; sourceTree = "<group>"; };
+		EA945F0B15F7A87B004EE290 /* HybridBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridBuffer.h; sourceTree = "<group>"; };
+		EA945F0C15F7A87B004EE290 /* HybridIndexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HybridIndexBuffer.cpp; sourceTree = "<group>"; };
+		EA945F0D15F7A87C004EE290 /* HybridIndexBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridIndexBuffer.h; sourceTree = "<group>"; };
+		EA945F0E15F7A87C004EE290 /* HybridVertexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HybridVertexBuffer.cpp; sourceTree = "<group>"; };
+		EA945F0F15F7A87C004EE290 /* HybridVertexBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridVertexBuffer.h; sourceTree = "<group>"; };
 		EACD243315D7E48D00453F75 /* LostEngine2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostEngine2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACD243715D7E48D00453F75 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostEngine2-Info.plist"; sourceTree = "<group>"; };
@@ -248,6 +260,14 @@
 				EACD24AA15D8523300453F75 /* Disallow.h */,
 				EA945F0315F7A43A004EE290 /* FragmentShader.cpp */,
 				EA945F0415F7A43A004EE290 /* FragmentShader.h */,
+				EA945F0815F7A87B004EE290 /* HostBuffer.cpp */,
+				EA945F0915F7A87B004EE290 /* HostBuffer.h */,
+				EA945F0A15F7A87B004EE290 /* HybridBuffer.cpp */,
+				EA945F0B15F7A87B004EE290 /* HybridBuffer.h */,
+				EA945F0C15F7A87B004EE290 /* HybridIndexBuffer.cpp */,
+				EA945F0D15F7A87C004EE290 /* HybridIndexBuffer.h */,
+				EA945F0E15F7A87C004EE290 /* HybridVertexBuffer.cpp */,
+				EA945F0F15F7A87C004EE290 /* HybridVertexBuffer.h */,
 				EA90FCC315E15C730071F358 /* lgl.cpp */,
 				EA90FCC215E15B4F0071F358 /* lgl.h */,
 				EACD24B515D853D300453F75 /* lmath.h */,
@@ -394,6 +414,10 @@
 				EA945F0515F7A4C1004EE290 /* FragmentShader.cpp in Sources */,
 				EA945F0615F7A503004EE290 /* VertexShader.cpp in Sources */,
 				EA945F0715F7A53F004EE290 /* ShaderProgram.cpp in Sources */,
+				EAF0438715F7A88E0095549F /* HostBuffer.cpp in Sources */,
+				EAF0438815F7A88E0095549F /* HybridBuffer.cpp in Sources */,
+				EAF0438915F7A88E0095549F /* HybridIndexBuffer.cpp in Sources */,
+				EAF0438A15F7A88E0095549F /* HybridVertexBuffer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
