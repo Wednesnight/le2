@@ -18,6 +18,10 @@
 		EA945EF215F79F4B004EE290 /* VertexAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945EF015F79F4B004EE290 /* VertexAttribute.cpp */; };
 		EA945EFA15F79F56004EE290 /* Uniform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945EF415F79F55004EE290 /* Uniform.cpp */; };
 		EA945EFB15F79F56004EE290 /* UniformBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945EF615F79F55004EE290 /* UniformBlock.cpp */; };
+		EA945EFE15F7A41B004EE290 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945EFC15F7A418004EE290 /* Shader.cpp */; };
+		EA945F0515F7A4C1004EE290 /* FragmentShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945F0315F7A43A004EE290 /* FragmentShader.cpp */; };
+		EA945F0615F7A503004EE290 /* VertexShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945F0115F7A430004EE290 /* VertexShader.cpp */; };
+		EA945F0715F7A53F004EE290 /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945EFF15F7A428004EE290 /* ShaderProgram.cpp */; };
 		EACD243815D7E48D00453F75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD243715D7E48D00453F75 /* Cocoa.framework */; };
 		EACD245A15D7E53300453F75 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD245915D7E53300453F75 /* OpenGL.framework */; };
 		EACD245C15D7E7E000453F75 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD245B15D7E7E000453F75 /* main.mm */; };
@@ -65,6 +69,14 @@
 		EA945EF715F79F56004EE290 /* UniformBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformBlock.h; sourceTree = "<group>"; };
 		EA945EF815F79F56004EE290 /* Variant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variant.h; sourceTree = "<group>"; };
 		EA945EF915F79F56004EE290 /* VariantType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariantType.h; sourceTree = "<group>"; };
+		EA945EFC15F7A418004EE290 /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		EA945EFD15F7A418004EE290 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		EA945EFF15F7A428004EE290 /* ShaderProgram.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderProgram.cpp; sourceTree = "<group>"; };
+		EA945F0015F7A428004EE290 /* ShaderProgram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
+		EA945F0115F7A430004EE290 /* VertexShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VertexShader.cpp; sourceTree = "<group>"; };
+		EA945F0215F7A430004EE290 /* VertexShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexShader.h; sourceTree = "<group>"; };
+		EA945F0315F7A43A004EE290 /* FragmentShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FragmentShader.cpp; sourceTree = "<group>"; };
+		EA945F0415F7A43A004EE290 /* FragmentShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FragmentShader.h; sourceTree = "<group>"; };
 		EACD243315D7E48D00453F75 /* LostEngine2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostEngine2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACD243715D7E48D00453F75 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostEngine2-Info.plist"; sourceTree = "<group>"; };
@@ -234,6 +246,8 @@
 				EACD24A515D8333100453F75 /* Data.cpp */,
 				EACD24A615D8333100453F75 /* Data.h */,
 				EACD24AA15D8523300453F75 /* Disallow.h */,
+				EA945F0315F7A43A004EE290 /* FragmentShader.cpp */,
+				EA945F0415F7A43A004EE290 /* FragmentShader.h */,
 				EA90FCC315E15C730071F358 /* lgl.cpp */,
 				EA90FCC215E15B4F0071F358 /* lgl.h */,
 				EACD24B515D853D300453F75 /* lmath.h */,
@@ -256,6 +270,10 @@
 				EACD24AC15D8528A00453F75 /* Rect.h */,
 				EA0EEAF615E677F0000CBC13 /* RectPacker.cpp */,
 				EA0EEAF715E677F0000CBC13 /* RectPacker.h */,
+				EA945EFC15F7A418004EE290 /* Shader.cpp */,
+				EA945EFD15F7A418004EE290 /* Shader.h */,
+				EA945EFF15F7A428004EE290 /* ShaderProgram.cpp */,
+				EA945F0015F7A428004EE290 /* ShaderProgram.h */,
 				EACD24A415D8328900453F75 /* shared_ptr.h */,
 				EACD249F15D81FF600453F75 /* StringStream.cpp */,
 				EACD24A015D81FF600453F75 /* StringStream.h */,
@@ -276,6 +294,8 @@
 				EA0EEAFD15E677F9000CBC13 /* Vec4.h */,
 				EA945EF015F79F4B004EE290 /* VertexAttribute.cpp */,
 				EA945EF115F79F4B004EE290 /* VertexAttribute.h */,
+				EA945F0115F7A430004EE290 /* VertexShader.cpp */,
+				EA945F0215F7A430004EE290 /* VertexShader.h */,
 			);
 			name = lost;
 			path = ../lost;
@@ -370,6 +390,10 @@
 				EA945EF215F79F4B004EE290 /* VertexAttribute.cpp in Sources */,
 				EA945EFA15F79F56004EE290 /* Uniform.cpp in Sources */,
 				EA945EFB15F79F56004EE290 /* UniformBlock.cpp in Sources */,
+				EA945EFE15F7A41B004EE290 /* Shader.cpp in Sources */,
+				EA945F0515F7A4C1004EE290 /* FragmentShader.cpp in Sources */,
+				EA945F0615F7A503004EE290 /* VertexShader.cpp in Sources */,
+				EA945F0715F7A53F004EE290 /* ShaderProgram.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
