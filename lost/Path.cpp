@@ -107,6 +107,13 @@ namespace lost
     return result;
   }
 
+  Path operator + (const Path& left, const char* right)
+  {
+    Path result(left);
+    result.path += right;
+    return result;
+  }
+
   bool exists(const Path& path)
   {
     return (access(path.string().c_str(), F_OK) != -1);

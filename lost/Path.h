@@ -38,11 +38,11 @@ namespace lost
     lost::string string() const;
     lost::string native() const;
 
-  protected:
     lost::string path;
   };
 
   Path operator / (const Path& left, const Path& right);
+  Path operator + (const Path& left, const char* right);
 
   bool exists(const Path& path);
   bool create_directories(const Path& path); 
