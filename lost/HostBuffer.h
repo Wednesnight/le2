@@ -29,6 +29,9 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 namespace lost
 {
 
+struct HostBuffer;
+typedef shared_ptr<HostBuffer> HostBufferPtr;
+
 struct HostBuffer
 {
   BufferLayout  layout;
