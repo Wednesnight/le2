@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		EA0C315415FCDBFE00661552 /* ShaderPreprocessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C315215FCDBFE00661552 /* ShaderPreprocessor.cpp */; };
 		EA0C315815FCE86E00661552 /* StringAdditions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C315615FCDC0900661552 /* StringAdditions.cpp */; };
+		EA0C316415FD25A200661552 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C315E15FD25A100661552 /* Camera.cpp */; };
+		EA0C316515FD25A200661552 /* Camera2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C316015FD25A100661552 /* Camera2D.cpp */; };
+		EA0C316615FD25A200661552 /* Camera3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C316215FD25A100661552 /* Camera3D.cpp */; };
 		EA0EEAF815E677F0000CBC13 /* RectPacker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0EEAF615E677F0000CBC13 /* RectPacker.cpp */; };
 		EA0EEB0015E67852000CBC13 /* Vec3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0EEAFA15E677F9000CBC13 /* Vec3.cpp */; };
 		EA0EEB0115E67855000CBC13 /* Vec4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0EEAFC15E677F9000CBC13 /* Vec4.cpp */; };
@@ -53,6 +56,12 @@
 		EA0C315315FCDBFE00661552 /* ShaderPreprocessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderPreprocessor.h; sourceTree = "<group>"; };
 		EA0C315615FCDC0900661552 /* StringAdditions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringAdditions.cpp; sourceTree = "<group>"; };
 		EA0C315715FCDC0900661552 /* StringAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringAdditions.h; sourceTree = "<group>"; };
+		EA0C315E15FD25A100661552 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		EA0C315F15FD25A100661552 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		EA0C316015FD25A100661552 /* Camera2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera2D.cpp; sourceTree = "<group>"; };
+		EA0C316115FD25A100661552 /* Camera2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera2D.h; sourceTree = "<group>"; };
+		EA0C316215FD25A100661552 /* Camera3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera3D.cpp; sourceTree = "<group>"; };
+		EA0C316315FD25A100661552 /* Camera3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera3D.h; sourceTree = "<group>"; };
 		EA0EEAF615E677F0000CBC13 /* RectPacker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RectPacker.cpp; sourceTree = "<group>"; };
 		EA0EEAF715E677F0000CBC13 /* RectPacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectPacker.h; sourceTree = "<group>"; };
 		EA0EEAFA15E677F9000CBC13 /* Vec3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vec3.cpp; sourceTree = "<group>"; };
@@ -248,6 +257,12 @@
 				EAF87C7D15E903B800986F86 /* BufferLayout.h */,
 				EA90FCB415DEAF9D0071F358 /* Bundle.cpp */,
 				EA90FCB515DEAF9D0071F358 /* Bundle.h */,
+				EA0C315E15FD25A100661552 /* Camera.cpp */,
+				EA0C315F15FD25A100661552 /* Camera.h */,
+				EA0C316015FD25A100661552 /* Camera2D.cpp */,
+				EA0C316115FD25A100661552 /* Camera2D.h */,
+				EA0C316215FD25A100661552 /* Camera3D.cpp */,
+				EA0C316315FD25A100661552 /* Camera3D.h */,
 				EACD24AD15D852AC00453F75 /* Color.cpp */,
 				EACD24AB15D8528400453F75 /* Color.h */,
 				EACD24A515D8333100453F75 /* Data.cpp */,
@@ -435,6 +450,9 @@
 				EAF0438A15F7A88E0095549F /* HybridVertexBuffer.cpp in Sources */,
 				EA0C315415FCDBFE00661552 /* ShaderPreprocessor.cpp in Sources */,
 				EA0C315815FCE86E00661552 /* StringAdditions.cpp in Sources */,
+				EA0C316415FD25A200661552 /* Camera.cpp in Sources */,
+				EA0C316515FD25A200661552 /* Camera2D.cpp in Sources */,
+				EA0C316615FD25A200661552 /* Camera3D.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
