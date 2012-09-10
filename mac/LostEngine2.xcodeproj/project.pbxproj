@@ -12,6 +12,8 @@
 		EA0C316415FD25A200661552 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C315E15FD25A100661552 /* Camera.cpp */; };
 		EA0C316515FD25A200661552 /* Camera2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C316015FD25A100661552 /* Camera2D.cpp */; };
 		EA0C316615FD25A200661552 /* Camera3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C316215FD25A100661552 /* Camera3D.cpp */; };
+		EA0C316915FD28E000661552 /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C316715FD28DF00661552 /* Material.cpp */; };
+		EA0C316C15FD28E700661552 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C316A15FD28E700661552 /* Mesh.cpp */; };
 		EA0EEAF815E677F0000CBC13 /* RectPacker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0EEAF615E677F0000CBC13 /* RectPacker.cpp */; };
 		EA0EEB0015E67852000CBC13 /* Vec3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0EEAFA15E677F9000CBC13 /* Vec3.cpp */; };
 		EA0EEB0115E67855000CBC13 /* Vec4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0EEAFC15E677F9000CBC13 /* Vec4.cpp */; };
@@ -62,6 +64,10 @@
 		EA0C316115FD25A100661552 /* Camera2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera2D.h; sourceTree = "<group>"; };
 		EA0C316215FD25A100661552 /* Camera3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera3D.cpp; sourceTree = "<group>"; };
 		EA0C316315FD25A100661552 /* Camera3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera3D.h; sourceTree = "<group>"; };
+		EA0C316715FD28DF00661552 /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Material.cpp; sourceTree = "<group>"; };
+		EA0C316815FD28DF00661552 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
+		EA0C316A15FD28E700661552 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
+		EA0C316B15FD28E700661552 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 		EA0EEAF615E677F0000CBC13 /* RectPacker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RectPacker.cpp; sourceTree = "<group>"; };
 		EA0EEAF715E677F0000CBC13 /* RectPacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectPacker.h; sourceTree = "<group>"; };
 		EA0EEAFA15E677F9000CBC13 /* Vec3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vec3.cpp; sourceTree = "<group>"; };
@@ -285,8 +291,12 @@
 				EACD248E15D81A6800453F75 /* Log.h */,
 				EACD248F15D81A6800453F75 /* MainHooks.cpp */,
 				EACD249015D81A6800453F75 /* MainHooks.h */,
+				EA0C316715FD28DF00661552 /* Material.cpp */,
+				EA0C316815FD28DF00661552 /* Material.h */,
 				EA0EEAFE15E67804000CBC13 /* Matrix.cpp */,
 				EA0EEAFF15E67804000CBC13 /* Matrix.h */,
+				EA0C316A15FD28E700661552 /* Mesh.cpp */,
+				EA0C316B15FD28E700661552 /* Mesh.h */,
 				EACD249115D81A6800453F75 /* Path.cpp */,
 				EACD249215D81A6800453F75 /* Path.h */,
 				EACD249815D81E4400453F75 /* Platform.h */,
@@ -453,6 +463,8 @@
 				EA0C316415FD25A200661552 /* Camera.cpp in Sources */,
 				EA0C316515FD25A200661552 /* Camera2D.cpp in Sources */,
 				EA0C316615FD25A200661552 /* Camera3D.cpp in Sources */,
+				EA0C316915FD28E000661552 /* Material.cpp in Sources */,
+				EA0C316C15FD28E700661552 /* Mesh.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

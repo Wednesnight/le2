@@ -18,6 +18,7 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define LOST_TYPES_H
 
 #include <stdint.h>
+#include "lost/shared_ptr.h"
 
 namespace lost
 {
@@ -33,6 +34,61 @@ namespace lost
   
   typedef float f32;
   typedef double f64;
+  
+  struct VertexShader;
+  typedef shared_ptr<VertexShader> VertexShaderPtr;
+
+  struct UniformBlock;
+  typedef shared_ptr<UniformBlock> UniformBlockPtr;
+
+  struct Texture;
+  typedef shared_ptr<Texture> TexturePtr;
+
+  struct ShaderProgram;
+  typedef shared_ptr<ShaderProgram> ShaderProgramPtr;
+  
+  struct Shader;
+  typedef shared_ptr<Shader> ShaderPtr;
+  
+  struct Mesh;
+  typedef shared_ptr<Mesh> MeshPtr;
+  
+  struct Material;
+  typedef shared_ptr<Material> MaterialPtr;
+  
+  struct HostBuffer;
+  typedef shared_ptr<HostBuffer> HostBufferPtr;
+
+  struct HybridBuffer;
+  typedef shared_ptr<HybridBuffer> HybridBufferPtr;
+
+  struct HybridIndexBuffer;
+  typedef shared_ptr<HybridIndexBuffer> HybridIndexBufferPtr;
+
+  struct HybridVertexBuffer;
+  typedef shared_ptr<HybridVertexBuffer> HybridVertexBufferPtr;
+
+  struct Bitmap;
+  typedef shared_ptr<Bitmap> BitmapPtr;
+
+  struct Buffer;
+  typedef shared_ptr<Buffer> BufferPtr;
+
+  struct Camera;
+  typedef shared_ptr<Camera> CameraPtr;
+
+  struct Camera2D;
+  typedef lost::shared_ptr<Camera2D> Camera2DPtr;
+
+  struct Camera3D;
+  typedef shared_ptr<Camera3D> Camera3DPtr;
+
+  struct Data;
+  typedef shared_ptr<Data> DataPtr;
+
+  struct FragmentShader;
+  typedef shared_ptr<FragmentShader> FragmentShaderPtr;
+
 }
 
 #endif

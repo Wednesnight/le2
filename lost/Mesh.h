@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2012 Tony Kostanjsek, Timo Boll
+Copyright (c) 2011 Tony Kostanjsek, Timo Boll
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish,
@@ -14,39 +14,44 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTH
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef LOST_GL_HOSTBUFFER_H
-#define LOST_GL_HOSTBUFFER_H
+#ifndef LOST_MESH
+#define LOST_MESH
 
-#include "lost/BufferLayout.h"
+#include "lost/Material.h"
 #include "lost/Vec2.h"
 #include "lost/Vec3.h"
 #include "lost/Vec4.h"
 #include "lost/Matrix.h"
-#include "lost/Color.h"
-#include "lost/Disallow.h"
+#include "lost/BufferLayout.h"
 
 namespace lost
 {
-
-struct HostBuffer
+struct Mesh
 {
-  BufferLayout  layout;
-  uint8_t*      buffer; // the actual physical buffer
-  uint32_t      count; // number of vertices/indices in this HostBuffer
+  Mesh();
+  Mesh(const BufferLayout& vertexLayout, ElementType indexType);
+  // completely initializes the mesh object with default values. This is usually called from a constructor
+  void init(const BufferLayout& vertexLayout, ElementType indexType);
+  virtual ~Mesh();
   
-  void init(const BufferLayout& inLayout);
-  HostBuffer(const BufferLayout& inLayout);
-  HostBuffer(const BufferLayout& inLayout, uint32_t num);
-  virtual ~HostBuffer();
-  void deleteBuffer();
-  uint32_t bufferSize(); // returns buffersize in bytes calculated from bufferlayout isze and count
+  static MeshPtr create() { return MeshPtr(new Mesh); }
+  static MeshPtr create(const BufferLayout& vertexLayout, ElementType indexType) { return MeshPtr(new Mesh(vertexLayout, indexType)); }
   
-  
-  // resizes the buffer to accomodate num structs with the current layout. if num is 0, the buffer will be cleared
-  void reset(uint32_t num);
-  void reset(DataPtr data);
-  unsigned char* elementAddress(uint32_t idx, UsageType ut); 
-  ElementType elementTypeFromUsageType(UsageType ut);
+  // resets the buffer types, throwing away all previously stored/allocated data. you need to call resetSize after this one.
+  void resetBuffers(const BufferLayout& vertexLayout, ElementType indexType);
+
+  // resets the size of vertex and index buffers
+  void resetSize(uint32_t numVertices, uint32_t numIndices);
+
+  // helper functions that could easily be replaced by direct access of buffers but were needed for migration
+  // FIXME: these are here for legacy reasons, should really be replaced with the versions below
+  void setIndex(uint32_t idx, uint32_t val);
+  void setVertex(uint32_t idx, const Vec2& val);
+  void setTexCoord(uint32_t idx, const Vec2& val);
+  Vec2 getVertex(uint32_t idx);
+
+  HybridBufferPtr bufferFromUsageType(UsageType ut);
+
   void set(uint32_t idx, UsageType ut, uint8_t val);
   void set(uint32_t idx, UsageType ut, uint16_t val);
   void set(uint32_t idx, UsageType ut, uint32_t val);
@@ -58,15 +63,17 @@ struct HostBuffer
   
   Vec2 getAsVec2(uint32_t idx, UsageType ut);
   Vec3 getAsVec3(uint32_t idx, UsageType ut);
-  uint32_t   getAsU32(uint32_t idx, UsageType ut); 
-  uint16_t   getAsU16(uint32_t idx, UsageType ut);
-  bool hasUsageType(UsageType ut); // true if there is an attribute with that usage type, false otherwise
-  
-  uint32_t numScalarsForUsageType(UsageType ut);
-private:
-  DISALLOW_COPY_AND_ASSIGN(HostBuffer);
-};
+  uint32_t   getAsU32(uint32_t idx, UsageType ut);  
+  uint16_t   getAsU16(uint32_t idx, UsageType ut);  
 
+  MaterialPtr material;
+  Matrix transform;
+  HybridVertexBufferPtr vertexBuffer;
+  HybridIndexBufferPtr indexBuffer;
+  
+  virtual MeshPtr clone();
+  uint32_t numVertices(); // returns the current size of the vertexbuffer
+};
 
 }
 

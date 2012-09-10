@@ -17,15 +17,11 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef LOST_SHADERPROGRAM_H
 #define LOST_SHADERPROGRAM_H
 
-#include "lost/Shader.h"
-#include "lost/Uniform.h"
 #include "lost/VertexAttribute.h"
+#include "lost/Uniform.h"
 
 namespace lost
 {
-
-struct ShaderProgram;
-typedef shared_ptr<ShaderProgram> ShaderProgramPtr;
 
 /** NOTE: in order to minimise side effects of functions, you manually have to call 
  *  buildUniformMap() and buildVertexAttributeMap() after you compiled, linked and enabled the shader.

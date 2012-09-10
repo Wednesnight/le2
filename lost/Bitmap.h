@@ -18,15 +18,11 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define LOST_BITMAP_BITMAP_H
 
 #include "lost/Disallow.h"
-#include "lost/Data.h"
 #include "lost/Color.h"
 #include "lost/Rect.h"
 
 namespace lost
 {
-  struct Bitmap;
-  typedef shared_ptr<Bitmap> BitmapPtr;
-
   struct Bitmap
   {
     

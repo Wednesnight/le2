@@ -17,8 +17,11 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef LOST_HYBRIDBUFFER_H
 #define LOST_HYBRIDBUFFER_H
 
-#include "lost/Buffer.h"
-#include "lost/HostBuffer.h"
+#include "lost/BufferLayout.h"
+#include "lost/Vec2.h"
+#include "lost/Vec3.h"
+#include "lost/Vec4.h"
+#include "lost/Color.h"
 
 namespace lost
 {

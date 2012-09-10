@@ -2,14 +2,9 @@
 #define LOST_TEXTURE_H
 
 #include "lost/Vec2.h"
-#include "lost/Data.h"
-#include "lost/Bitmap.h"
 
 namespace lost
 {
-  struct Texture;
-  typedef shared_ptr<Texture> TexturePtr;
-
   /** a 2D Texture helper class.
    *
    */

@@ -2,6 +2,7 @@
 #include "lost/PlatformPaths.h"
 #include "lost/Log.h"
 #include <stdio.h>
+#include "lost/Data.h"
 
 namespace lost
 {

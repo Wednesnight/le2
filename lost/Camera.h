@@ -23,9 +23,6 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 namespace lost
 {
-struct Camera;
-typedef lost::shared_ptr<Camera> CameraPtr;
-
 struct Camera
 {
 protected:

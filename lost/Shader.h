@@ -20,9 +20,6 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 namespace lost
 {
 
-struct Shader;
-typedef shared_ptr<Shader> ShaderPtr;
-
 struct Shader 
 {
   Shader(GLenum type);

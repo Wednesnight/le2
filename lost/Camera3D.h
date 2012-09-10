@@ -24,9 +24,6 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 namespace lost
 {
-struct Camera3D;
-typedef shared_ptr<Camera3D> Camera3DPtr;
-
 struct Camera3D : public Camera
 {
 private:

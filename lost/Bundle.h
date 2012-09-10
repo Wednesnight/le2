@@ -2,7 +2,6 @@
 #define LOST_BUNDLE_H
 
 #include "lost/Path.h"
-#include "lost/Data.h"
 
 namespace lost
 {

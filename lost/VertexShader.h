@@ -22,9 +22,6 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 namespace lost
 {
 
-struct VertexShader;
-typedef shared_ptr<VertexShader> VertexShaderPtr;
-
 struct VertexShader : public Shader
 {
   VertexShader();

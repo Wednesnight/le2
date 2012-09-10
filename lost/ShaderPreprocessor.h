@@ -2,7 +2,6 @@
 #define LOST_SHADERPREPROCESSOR_H
 
 #include "lost/Bundle.h"
-#include "lost/ShaderProgram.h"
 
 namespace lost
 {

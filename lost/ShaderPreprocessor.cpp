@@ -2,6 +2,8 @@
 #include "lost/StringAdditions.h"
 #include "lost/VertexShader.h"
 #include "lost/FragmentShader.h"
+#include "lost/Data.h"
+#include "lost/ShaderProgram.h"
 
 namespace lost
 {

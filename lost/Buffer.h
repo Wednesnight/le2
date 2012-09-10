@@ -21,10 +21,6 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 namespace lost
 {
-
-struct Buffer;
-typedef shared_ptr<Buffer> BufferPtr;
-
 struct Buffer
 {
   GLuint buffer;

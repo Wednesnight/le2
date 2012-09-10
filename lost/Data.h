@@ -19,9 +19,6 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 namespace lost
 {
-  struct Data;
-  typedef shared_ptr<Data> DataPtr;
-
   struct Data
   {
     lost::shared_array<char> bytes;

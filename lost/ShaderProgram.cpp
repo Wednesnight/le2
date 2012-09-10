@@ -15,6 +15,8 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 #include "lost/ShaderProgram.h"
+#include "lost/Shader.h"
+#include "lost/Uniform.h"
 
 namespace lost
 {

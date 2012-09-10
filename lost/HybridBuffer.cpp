@@ -16,6 +16,8 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "lost/HybridBuffer.h"
 #include "lost/Context.h"
+#include "lost/Buffer.h"
+#include "lost/HostBuffer.h"
 
 namespace lost
 {

@@ -21,10 +21,6 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 namespace lost
 {
-
-struct FragmentShader;
-typedef shared_ptr<FragmentShader> FragmentShaderPtr;
-
 struct FragmentShader : public Shader
 {
   FragmentShader();

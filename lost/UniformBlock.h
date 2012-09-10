@@ -21,8 +21,6 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 namespace lost
 {
-struct UniformBlock;
-typedef shared_ptr<UniformBlock> UniformBlockPtr;
 
 struct UniformBlock
 {

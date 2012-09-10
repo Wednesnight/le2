@@ -14,22 +14,39 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTH
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef LOST_CAMERA2D_H
-#define LOST_CAMERA2D_H
+#ifndef LOST_MATERIAL_H
+#define LOST_MATERIAL_H
 
-#include "lost/Camera.h"
+#include "lost/Color.h"
 
 namespace lost
 {
-struct Camera2D : public Camera
-{
-protected:
-  void update();
 
-public:
-  Camera2D(const Rect& inViewport);
-  static Camera2DPtr create(const Rect& inViewport);
+struct Material
+{
+  vector<TexturePtr>  textures;
+  Color               color;
+  bool                blend;
+  GLenum              blendSrc;
+  GLenum              blendDest;
+  ShaderProgramPtr    shader;
+  UniformBlockPtr     uniforms;
+  bool                cull;
+  GLenum              cullMode;
+  
+  Material();
+  virtual ~Material();
+  static MaterialPtr create();
+  void blendNormal();
+  void blendPremultiplied();
+  void blendOff();
+  void add(const TexturePtr& tex);
+  void setTexture(uint32_t texIndex, const TexturePtr& tex);
+  TexturePtr getTexture(uint32_t idx);
+  void limitTextures(uint32_t num); // throws away all textures with index > num
+  MaterialPtr clone();
 };
+
 }
 
 #endif
