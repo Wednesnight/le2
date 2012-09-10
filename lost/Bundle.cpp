@@ -3,6 +3,8 @@
 #include "lost/Log.h"
 #include <stdio.h>
 #include "lost/Data.h"
+#include "lost/ShaderPreprocessor.h"
+#include "lost/Texture.h"
 
 namespace lost
 {
@@ -38,6 +40,17 @@ DataPtr Bundle::load(const Path& relativePath) const
   ASSERT(0 == fclose(file), "couldn't close "<<spath); 
   return result;
 }
+
+ShaderProgramPtr Bundle::loadShader(const Path& relativePath) const
+{
+  return lost::loadShader(*this, relativePath);
+}
+
+TexturePtr Bundle::loadTexture(const Path& relativePath) const
+{
+  return Texture::create(load(relativePath));
+}
+
 
 ResourceBundle::ResourceBundle()
 : Bundle(getResourcePath())

@@ -3,7 +3,6 @@
 #include "lost/Bundle.h"
 #include "lost/Bitmap.h"
 #include "lost/Texture.h"
-#include "ShaderPreprocessor.h"
 #include "lost/Context.h"
 #include "lost/BufferLayout.h"
 #include "lost/Mesh.h"
@@ -69,13 +68,10 @@ void leStartup()
 {
   context = new Context;
   ResourceBundle mainBundle;
-  colorShader = loadShader(mainBundle, "resources/glsl/color");
-  textureShader = loadShader(mainBundle, "resources/glsl/texture");
-
-
-  DataPtr data = mainBundle.load("resources/rings.png");
-  BitmapPtr bmp = Bitmap::create(data);
-	ringTexture = Texture::create(bmp);
+  colorShader = mainBundle.loadShader("resources/glsl/color");
+  textureShader = mainBundle.loadShader("resources/glsl/texture");
+	ringTexture = mainBundle.loadTexture("resources/rings.png");
+  cam = Camera2D::create(Rect(0,0,1024,768));
 
   coloredQuad = createQuad(Rect(0,0,50,50));
   coloredQuad->material->shader = colorShader;
@@ -87,7 +83,6 @@ void leStartup()
   texturedQuad->material->add(ringTexture);
   texturedQuad->material->blendNormal();
 
-  cam = Camera2D::create(Rect(0,0,1024,768));
 }
 
 void leUpdate()

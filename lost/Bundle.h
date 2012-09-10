@@ -15,7 +15,9 @@ struct Bundle
   Bundle(const Path& inPath);
   virtual ~Bundle() {};
   
-  DataPtr load(const Path& relativePath) const;
+  DataPtr           load(const Path& relativePath) const;
+  ShaderProgramPtr  loadShader(const Path& relativePath) const; // loads shader using the shader preprocessor function
+  TexturePtr        loadTexture(const Path& relativePath) const; // convenience function that loads an image and instantiates a texture. 
   
   Path _path;
 };
