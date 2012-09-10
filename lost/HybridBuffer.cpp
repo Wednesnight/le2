@@ -136,6 +136,7 @@ uint16_t HybridBuffer::getAsU16(uint32_t idx, UsageType ut)
 void HybridBuffer::upload()
 {
   Buffer* buffer = gpuBuffer.get();
+  buffer->bind();
 // FIXME: need to call bind in Context before uploading
 //  Context::getCurrent()->bind(buffer);
   buffer->bufferData(buffer->target, 

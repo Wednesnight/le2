@@ -65,11 +65,8 @@ void Texture::destroy()
 
 void Texture::bind() 
 {
-// FIXME  Context::getCurrent()->bindTexture(texture, neverBeenBound);
-  if(neverBeenBound)
-  {
-    neverBeenBound = false;
-  }
+  glBindTexture(GL_TEXTURE_2D, texture);GLASSERT;
+  neverBeenBound = false;
 }
 
 void Texture::init(const DataPtr& inData,  const Params& inParams)
