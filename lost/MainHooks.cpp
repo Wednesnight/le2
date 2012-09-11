@@ -12,6 +12,7 @@
 #include "lost/TextRender.h"
 #include "lost/TextMesh.h"
 #include "lost/Material.h"
+#include "lost/TextBuffer.h"
 
 namespace lost 
 {
@@ -24,7 +25,8 @@ ShaderProgramPtr textureShader;
 CameraPtr cam;
 TexturePtr ringTexture;
 FontPtr font;
-TextMeshPtr renderedText;
+TextMeshPtr rt1;
+TextMeshPtr rt2;
 
 MeshPtr createQuad(Rect rect)
 {
@@ -82,10 +84,24 @@ void leStartup()
   DataPtr fontData = mainBundle.load("resources/fonts/vera/Vera.ttf");
   font.reset(new TruetypeFont(fontData, 18));
 
-  renderedText = render("I vant to drink your blood!", font, false);
-  renderedText->material->shader = textureShader;
-  renderedText->material->blendPremultiplied();
-  renderedText->transform = MatrixTranslation(Vec3(50,50,0));
+  rt2.reset(new TextMesh());
+  TextBuffer tb;
+  tb.font(font);
+  tb.width(200);
+  tb.breakMode(BREAKMODE_WORD);
+  tb.text("This here is a relatively long text, that's hopefully gonna be rendered in multiple lines.");
+  tb.setAlign(2);
+  tb.reset();
+  tb.renderAllPhysicalLines(rt2);
+  rt2->material->blendPremultiplied();
+  rt2->material->shader = textureShader;
+  rt2->transform = MatrixTranslation(Vec3(200,200,0));
+
+  rt1 = render("I vant to drink your blood!", font, false);
+  rt1->material->shader = textureShader;
+  rt1->material->blendPremultiplied();
+  rt1->transform = MatrixTranslation(Vec3(50,50,0));
+
 
 
   coloredQuad = createQuad(Rect(0,0,50,50));
@@ -107,7 +123,8 @@ void leUpdate()
   context->clear(GL_COLOR_BUFFER_BIT |GL_DEPTH_BUFFER_BIT);
   context->draw(coloredQuad);
   context->draw(texturedQuad);
-  context->draw(renderedText);
+  context->draw(rt1);
+  context->draw(rt2);
   context->swapBuffers();
 }
 
