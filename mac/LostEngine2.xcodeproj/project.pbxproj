@@ -29,6 +29,14 @@
 		EA945F0615F7A503004EE290 /* VertexShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945F0115F7A430004EE290 /* VertexShader.cpp */; };
 		EA945F0715F7A53F004EE290 /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA945EFF15F7A428004EE290 /* ShaderProgram.cpp */; };
 		EAADB60F15FF97FD008F7450 /* BitmapPacker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAADB60D15FF97FD008F7450 /* BitmapPacker.cpp */; };
+		EAADB61915FFA391008F7450 /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAADB61515FFA391008F7450 /* Font.cpp */; };
+		EAADB61A15FFA391008F7450 /* FontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAADB61715FFA391008F7450 /* FontManager.cpp */; };
+		EAADB62215FFA3A2008F7450 /* TextBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAADB61C15FFA3A2008F7450 /* TextBuffer.cpp */; };
+		EAADB62315FFA3A2008F7450 /* TextMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAADB61E15FFA3A2008F7450 /* TextMesh.cpp */; };
+		EAADB62415FFA3A2008F7450 /* TextRender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAADB62015FFA3A2008F7450 /* TextRender.cpp */; };
+		EAADB62715FFA3BA008F7450 /* TruetypeFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAADB62515FFA3BA008F7450 /* TruetypeFont.cpp */; };
+		EAADB62A15FFA76B008F7450 /* Glyph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAADB62815FFA76B008F7450 /* Glyph.cpp */; };
+		EAADB62D15FFABC4008F7450 /* Quad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAADB62B15FFABC4008F7450 /* Quad.cpp */; };
 		EAB2B90D15FE4703001CF4EF /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B90C15FE4703001CF4EF /* Context.cpp */; };
 		EAB2B90F15FE470A001CF4EF /* ContextMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B90E15FE470A001CF4EF /* ContextMac.mm */; };
 		EACD243815D7E48D00453F75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD243715D7E48D00453F75 /* Cocoa.framework */; };
@@ -113,6 +121,24 @@
 		EA945F0F15F7A87C004EE290 /* HybridVertexBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridVertexBuffer.h; sourceTree = "<group>"; };
 		EAADB60D15FF97FD008F7450 /* BitmapPacker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitmapPacker.cpp; sourceTree = "<group>"; };
 		EAADB60E15FF97FD008F7450 /* BitmapPacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapPacker.h; sourceTree = "<group>"; };
+		EAADB61515FFA391008F7450 /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
+		EAADB61615FFA391008F7450 /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Font.h; sourceTree = "<group>"; };
+		EAADB61715FFA391008F7450 /* FontManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontManager.cpp; sourceTree = "<group>"; };
+		EAADB61815FFA391008F7450 /* FontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontManager.h; sourceTree = "<group>"; };
+		EAADB61B15FFA3A2008F7450 /* TextBreakmodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextBreakmodes.h; sourceTree = "<group>"; };
+		EAADB61C15FFA3A2008F7450 /* TextBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextBuffer.cpp; sourceTree = "<group>"; };
+		EAADB61D15FFA3A2008F7450 /* TextBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextBuffer.h; sourceTree = "<group>"; };
+		EAADB61E15FFA3A2008F7450 /* TextMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextMesh.cpp; sourceTree = "<group>"; };
+		EAADB61F15FFA3A2008F7450 /* TextMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMesh.h; sourceTree = "<group>"; };
+		EAADB62015FFA3A2008F7450 /* TextRender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextRender.cpp; sourceTree = "<group>"; };
+		EAADB62115FFA3A2008F7450 /* TextRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextRender.h; sourceTree = "<group>"; };
+		EAADB62515FFA3BA008F7450 /* TruetypeFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TruetypeFont.cpp; sourceTree = "<group>"; };
+		EAADB62615FFA3BA008F7450 /* TruetypeFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TruetypeFont.h; sourceTree = "<group>"; };
+		EAADB62815FFA76B008F7450 /* Glyph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Glyph.cpp; sourceTree = "<group>"; };
+		EAADB62915FFA76B008F7450 /* Glyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Glyph.h; sourceTree = "<group>"; };
+		EAADB62B15FFABC4008F7450 /* Quad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quad.cpp; sourceTree = "<group>"; };
+		EAADB62C15FFABC4008F7450 /* Quad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quad.h; sourceTree = "<group>"; };
+		EAADB62E15FFB7DD008F7450 /* Range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Range.h; sourceTree = "<group>"; };
 		EAB2B8FE15FE3DEE001CF4EF /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
 		EAB2B90C15FE4703001CF4EF /* Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Context.cpp; sourceTree = "<group>"; };
 		EAB2B90E15FE470A001CF4EF /* ContextMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContextMac.mm; sourceTree = "<group>"; };
@@ -287,8 +313,14 @@
 				EACD24A515D8333100453F75 /* Data.cpp */,
 				EACD24A615D8333100453F75 /* Data.h */,
 				EACD24AA15D8523300453F75 /* Disallow.h */,
+				EAADB61515FFA391008F7450 /* Font.cpp */,
+				EAADB61615FFA391008F7450 /* Font.h */,
+				EAADB61715FFA391008F7450 /* FontManager.cpp */,
+				EAADB61815FFA391008F7450 /* FontManager.h */,
 				EA945F0315F7A43A004EE290 /* FragmentShader.cpp */,
 				EA945F0415F7A43A004EE290 /* FragmentShader.h */,
+				EAADB62815FFA76B008F7450 /* Glyph.cpp */,
+				EAADB62915FFA76B008F7450 /* Glyph.h */,
 				EA945F0815F7A87B004EE290 /* HostBuffer.cpp */,
 				EA945F0915F7A87B004EE290 /* HostBuffer.h */,
 				EA945F0A15F7A87B004EE290 /* HybridBuffer.cpp */,
@@ -319,6 +351,9 @@
 				EACD249B15D81E4400453F75 /* PlatformTime.h */,
 				EACD249C15D81E4400453F75 /* PlatformType.h */,
 				EACD249315D81A6800453F75 /* prefix-shared.h */,
+				EAADB62B15FFABC4008F7450 /* Quad.cpp */,
+				EAADB62C15FFABC4008F7450 /* Quad.h */,
+				EAADB62E15FFB7DD008F7450 /* Range.h */,
 				EACD24AF15D852B300453F75 /* Rect.cpp */,
 				EACD24AC15D8528A00453F75 /* Rect.h */,
 				EA0EEAF615E677F0000CBC13 /* RectPacker.cpp */,
@@ -334,8 +369,17 @@
 				EA0C315715FCDC0900661552 /* StringAdditions.h */,
 				EACD249F15D81FF600453F75 /* StringStream.cpp */,
 				EACD24A015D81FF600453F75 /* StringStream.h */,
+				EAADB61B15FFA3A2008F7450 /* TextBreakmodes.h */,
+				EAADB61C15FFA3A2008F7450 /* TextBuffer.cpp */,
+				EAADB61D15FFA3A2008F7450 /* TextBuffer.h */,
+				EAADB61E15FFA3A2008F7450 /* TextMesh.cpp */,
+				EAADB61F15FFA3A2008F7450 /* TextMesh.h */,
+				EAADB62015FFA3A2008F7450 /* TextRender.cpp */,
+				EAADB62115FFA3A2008F7450 /* TextRender.h */,
 				EA90FCBF15E151600071F358 /* Texture.cpp */,
 				EA90FCC015E151600071F358 /* Texture.h */,
+				EAADB62515FFA3BA008F7450 /* TruetypeFont.cpp */,
+				EAADB62615FFA3BA008F7450 /* TruetypeFont.h */,
 				EACD249715D81B3E00453F75 /* types.h */,
 				EA945EF415F79F55004EE290 /* Uniform.cpp */,
 				EA945EF515F79F55004EE290 /* Uniform.h */,
@@ -481,6 +525,14 @@
 				EAB2B90D15FE4703001CF4EF /* Context.cpp in Sources */,
 				EAB2B90F15FE470A001CF4EF /* ContextMac.mm in Sources */,
 				EAADB60F15FF97FD008F7450 /* BitmapPacker.cpp in Sources */,
+				EAADB61915FFA391008F7450 /* Font.cpp in Sources */,
+				EAADB61A15FFA391008F7450 /* FontManager.cpp in Sources */,
+				EAADB62215FFA3A2008F7450 /* TextBuffer.cpp in Sources */,
+				EAADB62315FFA3A2008F7450 /* TextMesh.cpp in Sources */,
+				EAADB62415FFA3A2008F7450 /* TextRender.cpp in Sources */,
+				EAADB62715FFA3BA008F7450 /* TruetypeFont.cpp in Sources */,
+				EAADB62A15FFA76B008F7450 /* Glyph.cpp in Sources */,
+				EAADB62D15FFABC4008F7450 /* Quad.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

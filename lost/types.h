@@ -18,6 +18,7 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define LOST_TYPES_H
 
 #include <stdint.h>
+#include <string>
 #include "lost/shared_ptr.h"
 
 namespace lost
@@ -34,61 +35,41 @@ namespace lost
   
   typedef float f32;
   typedef double f64;
+
+  typedef uint8_t                         utf8_char;
+  typedef std::basic_string<utf8_char>    utf8_string;
+
+  typedef uint16_t                        utf16_char;
+  typedef std::basic_string<utf16_char>   utf16_string;
+
+  typedef uint32_t                        utf32_char;
+  typedef std::basic_string<utf32_char>   utf32_string;
+
+  #define LE_SP(structname) struct structname;typedef shared_ptr<structname> structname##Ptr;
   
-  struct VertexShader;
-  typedef shared_ptr<VertexShader> VertexShaderPtr;
-
-  struct UniformBlock;
-  typedef shared_ptr<UniformBlock> UniformBlockPtr;
-
-  struct Texture;
-  typedef shared_ptr<Texture> TexturePtr;
-
-  struct ShaderProgram;
-  typedef shared_ptr<ShaderProgram> ShaderProgramPtr;
-  
-  struct Shader;
-  typedef shared_ptr<Shader> ShaderPtr;
-  
-  struct Mesh;
-  typedef shared_ptr<Mesh> MeshPtr;
-  
-  struct Material;
-  typedef shared_ptr<Material> MaterialPtr;
-  
-  struct HostBuffer;
-  typedef shared_ptr<HostBuffer> HostBufferPtr;
-
-  struct HybridBuffer;
-  typedef shared_ptr<HybridBuffer> HybridBufferPtr;
-
-  struct HybridIndexBuffer;
-  typedef shared_ptr<HybridIndexBuffer> HybridIndexBufferPtr;
-
-  struct HybridVertexBuffer;
-  typedef shared_ptr<HybridVertexBuffer> HybridVertexBufferPtr;
-
-  struct Bitmap;
-  typedef shared_ptr<Bitmap> BitmapPtr;
-
-  struct Buffer;
-  typedef shared_ptr<Buffer> BufferPtr;
-
-  struct Camera;
-  typedef shared_ptr<Camera> CameraPtr;
-
-  struct Camera2D;
-  typedef lost::shared_ptr<Camera2D> Camera2DPtr;
-
-  struct Camera3D;
-  typedef shared_ptr<Camera3D> Camera3DPtr;
-
-  struct Data;
-  typedef shared_ptr<Data> DataPtr;
-
-  struct FragmentShader;
-  typedef shared_ptr<FragmentShader> FragmentShaderPtr;
-
+  LE_SP(VertexShader);
+  LE_SP(UniformBlock);
+  LE_SP(Texture);
+  LE_SP(ShaderProgram);
+  LE_SP(Shader);
+  LE_SP(Mesh);
+  LE_SP(Material);
+  LE_SP(HostBuffer);
+  LE_SP(HybridBuffer);
+  LE_SP(HybridIndexBuffer);
+  LE_SP(HybridVertexBuffer);
+  LE_SP(Bitmap);
+  LE_SP(Buffer);
+  LE_SP(Camera);
+  LE_SP(Camera2D);
+  LE_SP(Camera3D);
+  LE_SP(Data);
+  LE_SP(FragmentShader);
+  LE_SP(Font);
+  LE_SP(Glyph);
+  LE_SP(TruetypeFont);
+  LE_SP(TextMesh);
+  LE_SP(Quad);
 }
 
 #endif

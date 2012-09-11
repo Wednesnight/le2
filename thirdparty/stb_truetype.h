@@ -365,7 +365,10 @@ int main(int arg, char **argv)
 
    // #define your own functions "STBTT_malloc" / "STBTT_free" to avoid malloc.h
    #ifndef STBTT_malloc
+   // don't include on apple since it won't be found
+   #if !defined(__APPLE__)
    #include <malloc.h>
+   #endif
    #define STBTT_malloc(x,u)  malloc(x)
    #define STBTT_free(x,u)    free(x)
    #endif

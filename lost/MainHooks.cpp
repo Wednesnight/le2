@@ -8,6 +8,10 @@
 #include "lost/Mesh.h"
 #include "lost/HybridIndexBuffer.h"
 #include "lost/Camera2D.h"
+#include "lost/TruetypeFont.h"
+#include "lost/TextRender.h"
+#include "lost/TextMesh.h"
+#include "lost/Material.h"
 
 namespace lost 
 {
@@ -19,6 +23,8 @@ ShaderProgramPtr colorShader;
 ShaderProgramPtr textureShader;
 CameraPtr cam;
 TexturePtr ringTexture;
+FontPtr font;
+TextMeshPtr renderedText;
 
 MeshPtr createQuad(Rect rect)
 {
@@ -72,6 +78,15 @@ void leStartup()
   textureShader = mainBundle.loadShader("resources/glsl/texture");
 	ringTexture = mainBundle.loadTexture("resources/rings.png");
   cam = Camera2D::create(Rect(0,0,1024,768));
+  
+  DataPtr fontData = mainBundle.load("resources/fonts/vera/Vera.ttf");
+  font.reset(new TruetypeFont(fontData, 18));
+
+  renderedText = render("I vant to drink your blood!", font, false);
+  renderedText->material->shader = textureShader;
+  renderedText->material->blendPremultiplied();
+  renderedText->transform = MatrixTranslation(Vec3(50,50,0));
+
 
   coloredQuad = createQuad(Rect(0,0,50,50));
   coloredQuad->material->shader = colorShader;
@@ -92,6 +107,7 @@ void leUpdate()
   context->clear(GL_COLOR_BUFFER_BIT |GL_DEPTH_BUFFER_BIT);
   context->draw(coloredQuad);
   context->draw(texturedQuad);
+  context->draw(renderedText);
   context->swapBuffers();
 }
 
