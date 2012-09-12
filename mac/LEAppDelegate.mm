@@ -1,15 +1,14 @@
 #import "LEAppDelegate.h"
 #import "LEGLView.h"
-#include "lost/MainHooks.h"
+#include "lost/Engine.h"
 
 @implementation LEAppDelegate
 
 - (void) quitAction: (id)sender
 {
-  DOUT("");
   LEGLView* view = (LEGLView*)[_window contentView];
   CVDisplayLinkStop([view displayLink]);
-  lost::leShutdown();
+  lost::Engine::instance()->doShutdown();
   [[NSApplication sharedApplication] terminate: nil];
 }
 

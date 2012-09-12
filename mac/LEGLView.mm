@@ -1,13 +1,13 @@
 #import "LEGLView.h"
-#import "MainHooks.h"
+#import "lost/Engine.h"
 
 static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTimeStamp* now, const CVTimeStamp* outputTime, CVOptionFlags flagsIn, CVOptionFlags* flagsOut, void* displayLinkContext)
 {
   LEGLView* glview = (LEGLView*)displayLinkContext;
   NSOpenGLContext* glcontext = [glview openGLContext];
   [glcontext makeCurrentContext];
-  lost::leUpdate();
-  [glcontext flushBuffer];  
+  lost::Engine::instance()->update();
+  [glcontext flushBuffer];
   
   return kCVReturnSuccess;
 }

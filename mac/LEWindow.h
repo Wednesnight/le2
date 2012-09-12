@@ -1,0 +1,6 @@
+@interface LEWindow : NSWindow
+{
+}
+
+@end
+

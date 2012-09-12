@@ -2,9 +2,9 @@
 #import "LEAppDelegate.h"
 #import "LEGLView.h"
 #import <OpenGL/gl.h>
-#import "MainHooks.h"
-
-#include "Log.h"
+#import "lost/Engine.h"
+#import "LEWindow.h"
+#include "lost/Log.h"
 
 NSOpenGLContext* glcontext = nil;
 
@@ -77,10 +77,10 @@ int main(int argc, char *argv[])
 
   // make ocntext current for this thread to be able to safely call startup
   [[glview openGLContext] makeCurrentContext];
-  lost::leStartup();
+  lost::Engine::instance()->doStartup();
   [NSOpenGLContext clearCurrentContext]; // then clear the context for this thread, so it's later only active on the render thread
   
-  NSWindow* window = [[NSWindow alloc]
+  LEWindow* window = [[LEWindow alloc]
                       initWithContentRect: r
                       styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask
                       backing: NSBackingStoreBuffered

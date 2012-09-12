@@ -1,5 +1,5 @@
-#include "MainHooks.h"
-#include "Log.h"
+#include "lost/Engine.h"
+#include "lost/Log.h"
 #include "lost/Bundle.h"
 #include "lost/Bitmap.h"
 #include "lost/Texture.h"
@@ -17,7 +17,6 @@
 namespace lost 
 {
 
-Context* context = NULL;
 MeshPtr coloredQuad;
 MeshPtr texturedQuad;
 ShaderProgramPtr colorShader;
@@ -72,9 +71,8 @@ MeshPtr createQuad(Rect rect)
 }
 
 
-void leStartup() 
+void Engine::startup()
 {
-  context = new Context;
   ResourceBundle mainBundle;
   colorShader = mainBundle.loadShader("resources/glsl/color");
   textureShader = mainBundle.loadShader("resources/glsl/texture");
@@ -116,23 +114,18 @@ void leStartup()
 
 }
 
-void leUpdate()
+void Engine::update()
 {
-  context->clearColor(blackColor);
-  context->camera(cam);
-  context->clear(GL_COLOR_BUFFER_BIT |GL_DEPTH_BUFFER_BIT);
-  context->draw(coloredQuad);
-  context->draw(texturedQuad);
-  context->draw(rt1);
-  context->draw(rt2);
-  context->swapBuffers();
+  glContext->clearColor(blackColor);
+  glContext->camera(cam);
+  glContext->clear(GL_COLOR_BUFFER_BIT |GL_DEPTH_BUFFER_BIT);
+  glContext->draw(coloredQuad);
+  glContext->draw(texturedQuad);
+  glContext->draw(rt1);
+  glContext->draw(rt2);
 }
 
-void leShutdown()
-{
-}
-
-void leWindowResize(float w, float h)
+void Engine::shutdown()
 {
 }
 

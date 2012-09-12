@@ -40,6 +40,13 @@
 		EAB2B90D15FE4703001CF4EF /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B90C15FE4703001CF4EF /* Context.cpp */; };
 		EAB2B90F15FE470A001CF4EF /* ContextMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B90E15FE470A001CF4EF /* ContextMac.mm */; };
 		EABB38E01600CC990009D8F7 /* LEAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = EABB38DF1600CC990009D8F7 /* LEAppDelegate.mm */; };
+		EABB38E41600CDD80009D8F7 /* LEWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = EABB38E31600CDD80009D8F7 /* LEWindow.mm */; };
+		EABB38E91600D42B0009D8F7 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABB38E51600D42B0009D8F7 /* Event.cpp */; };
+		EABB38EA1600D42B0009D8F7 /* EventQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABB38E71600D42B0009D8F7 /* EventQueue.cpp */; };
+		EABB38ED1600D6FA0009D8F7 /* EventPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABB38EB1600D6FA0009D8F7 /* EventPool.cpp */; };
+		EABB38F21600DCF00009D8F7 /* tinythread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABB38F01600DCF00009D8F7 /* tinythread.cpp */; };
+		EABB38F516010B670009D8F7 /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABB38F316010B670009D8F7 /* Engine.cpp */; };
+		EABB38F716010F160009D8F7 /* EngineUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABB38F616010F160009D8F7 /* EngineUser.cpp */; };
 		EACD243815D7E48D00453F75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD243715D7E48D00453F75 /* Cocoa.framework */; };
 		EACD245A15D7E53300453F75 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD245915D7E53300453F75 /* OpenGL.framework */; };
 		EACD245C15D7E7E000453F75 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD245B15D7E7E000453F75 /* main.mm */; };
@@ -47,7 +54,6 @@
 		EACD246E15D7EFEA00453F75 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD246D15D7EFEA00453F75 /* QuartzCore.framework */; };
 		EACD247915D7F82100453F75 /* stb_image.c in Sources */ = {isa = PBXBuildFile; fileRef = EACD247115D7F82100453F75 /* stb_image.c */; };
 		EACD249415D81A6800453F75 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD248D15D81A6800453F75 /* Log.cpp */; };
-		EACD249515D81A6800453F75 /* MainHooks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD248F15D81A6800453F75 /* MainHooks.cpp */; };
 		EACD249615D81A6800453F75 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD249115D81A6800453F75 /* Path.cpp */; };
 		EACD24A115D81FF600453F75 /* StringStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACD249F15D81FF600453F75 /* StringStream.cpp */; };
 		EACD24A315D825A600453F75 /* PlatformMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD24A215D825A600453F75 /* PlatformMac.mm */; };
@@ -143,6 +149,20 @@
 		EAB2B90C15FE4703001CF4EF /* Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Context.cpp; sourceTree = "<group>"; };
 		EAB2B90E15FE470A001CF4EF /* ContextMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContextMac.mm; sourceTree = "<group>"; };
 		EABB38DF1600CC990009D8F7 /* LEAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LEAppDelegate.mm; sourceTree = SOURCE_ROOT; };
+		EABB38E21600CDD80009D8F7 /* LEWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEWindow.h; sourceTree = SOURCE_ROOT; };
+		EABB38E31600CDD80009D8F7 /* LEWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LEWindow.mm; sourceTree = SOURCE_ROOT; };
+		EABB38E51600D42B0009D8F7 /* Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
+		EABB38E61600D42B0009D8F7 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		EABB38E71600D42B0009D8F7 /* EventQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventQueue.cpp; sourceTree = "<group>"; };
+		EABB38E81600D42B0009D8F7 /* EventQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventQueue.h; sourceTree = "<group>"; };
+		EABB38EB1600D6FA0009D8F7 /* EventPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EventPool.cpp; sourceTree = "<group>"; };
+		EABB38EC1600D6FA0009D8F7 /* EventPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventPool.h; sourceTree = "<group>"; };
+		EABB38EF1600DCF00009D8F7 /* fast_mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fast_mutex.h; path = ../thirdparty/tinythread/source/fast_mutex.h; sourceTree = "<group>"; };
+		EABB38F01600DCF00009D8F7 /* tinythread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinythread.cpp; path = ../thirdparty/tinythread/source/tinythread.cpp; sourceTree = "<group>"; };
+		EABB38F11600DCF00009D8F7 /* tinythread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tinythread.h; path = ../thirdparty/tinythread/source/tinythread.h; sourceTree = "<group>"; };
+		EABB38F316010B670009D8F7 /* Engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Engine.cpp; sourceTree = "<group>"; };
+		EABB38F416010B670009D8F7 /* Engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Engine.h; sourceTree = "<group>"; };
+		EABB38F616010F160009D8F7 /* EngineUser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EngineUser.cpp; sourceTree = "<group>"; };
 		EACD243315D7E48D00453F75 /* LostEngine2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostEngine2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACD243715D7E48D00453F75 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostEngine2-Info.plist"; sourceTree = "<group>"; };
@@ -162,8 +182,6 @@
 		EACD247815D7F82100453F75 /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8.h; sourceTree = "<group>"; };
 		EACD248D15D81A6800453F75 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
 		EACD248E15D81A6800453F75 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
-		EACD248F15D81A6800453F75 /* MainHooks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainHooks.cpp; sourceTree = "<group>"; };
-		EACD249015D81A6800453F75 /* MainHooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainHooks.h; sourceTree = "<group>"; };
 		EACD249115D81A6800453F75 /* Path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
 		EACD249215D81A6800453F75 /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
 		EACD249315D81A6800453F75 /* prefix-shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "prefix-shared.h"; sourceTree = "<group>"; };
@@ -209,6 +227,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EABB38EE1600DCE10009D8F7 /* tinythread */ = {
+			isa = PBXGroup;
+			children = (
+				EABB38EF1600DCF00009D8F7 /* fast_mutex.h */,
+				EABB38F01600DCF00009D8F7 /* tinythread.cpp */,
+				EABB38F11600DCF00009D8F7 /* tinythread.h */,
+			);
+			name = tinythread;
+			sourceTree = "<group>";
+		};
 		EACD242815D7E48D00453F75 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +273,8 @@
 				EABB38DF1600CC990009D8F7 /* LEAppDelegate.mm */,
 				EACD246015D7EEF400453F75 /* LEGLView.h */,
 				EACD246115D7EEF400453F75 /* LEGLView.mm */,
+				EABB38E21600CDD80009D8F7 /* LEWindow.h */,
+				EABB38E31600CDD80009D8F7 /* LEWindow.mm */,
 				EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */,
 				EACD244515D7E48D00453F75 /* LostEngine2-Prefix.pch */,
 				EA88BDD915E26FE9006D2B1D /* prefix-debug.pch */,
@@ -258,6 +288,7 @@
 		EACD246F15D7F35C00453F75 /* thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				EABB38EE1600DCE10009D8F7 /* tinythread */,
 				EACD247015D7F82100453F75 /* stb_image_write.h */,
 				EACD247115D7F82100453F75 /* stb_image.c */,
 				EACD247215D7F82100453F75 /* stb_truetype.h */,
@@ -313,6 +344,15 @@
 				EACD24A515D8333100453F75 /* Data.cpp */,
 				EACD24A615D8333100453F75 /* Data.h */,
 				EACD24AA15D8523300453F75 /* Disallow.h */,
+				EABB38F316010B670009D8F7 /* Engine.cpp */,
+				EABB38F416010B670009D8F7 /* Engine.h */,
+				EABB38F616010F160009D8F7 /* EngineUser.cpp */,
+				EABB38E51600D42B0009D8F7 /* Event.cpp */,
+				EABB38E61600D42B0009D8F7 /* Event.h */,
+				EABB38EB1600D6FA0009D8F7 /* EventPool.cpp */,
+				EABB38EC1600D6FA0009D8F7 /* EventPool.h */,
+				EABB38E71600D42B0009D8F7 /* EventQueue.cpp */,
+				EABB38E81600D42B0009D8F7 /* EventQueue.h */,
 				EAADB61515FFA391008F7450 /* Font.cpp */,
 				EAADB61615FFA391008F7450 /* Font.h */,
 				EAADB61715FFA391008F7450 /* FontManager.cpp */,
@@ -334,8 +374,6 @@
 				EACD24B515D853D300453F75 /* lmath.h */,
 				EACD248D15D81A6800453F75 /* Log.cpp */,
 				EACD248E15D81A6800453F75 /* Log.h */,
-				EACD248F15D81A6800453F75 /* MainHooks.cpp */,
-				EACD249015D81A6800453F75 /* MainHooks.h */,
 				EA0C316715FD28DF00661552 /* Material.cpp */,
 				EA0C316815FD28DF00661552 /* Material.h */,
 				EA0EEAFE15E67804000CBC13 /* Matrix.cpp */,
@@ -485,7 +523,6 @@
 				EACD246215D7EEFD00453F75 /* LEGLView.mm in Sources */,
 				EACD247915D7F82100453F75 /* stb_image.c in Sources */,
 				EACD249415D81A6800453F75 /* Log.cpp in Sources */,
-				EACD249515D81A6800453F75 /* MainHooks.cpp in Sources */,
 				EACD249615D81A6800453F75 /* Path.cpp in Sources */,
 				EACD24A115D81FF600453F75 /* StringStream.cpp in Sources */,
 				EACD24A315D825A600453F75 /* PlatformMac.mm in Sources */,
@@ -533,6 +570,13 @@
 				EAADB62A15FFA76B008F7450 /* Glyph.cpp in Sources */,
 				EAADB62D15FFABC4008F7450 /* Quad.cpp in Sources */,
 				EABB38E01600CC990009D8F7 /* LEAppDelegate.mm in Sources */,
+				EABB38E41600CDD80009D8F7 /* LEWindow.mm in Sources */,
+				EABB38E91600D42B0009D8F7 /* Event.cpp in Sources */,
+				EABB38EA1600D42B0009D8F7 /* EventQueue.cpp in Sources */,
+				EABB38ED1600D6FA0009D8F7 /* EventPool.cpp in Sources */,
+				EABB38F21600DCF00009D8F7 /* tinythread.cpp in Sources */,
+				EABB38F516010B670009D8F7 /* Engine.cpp in Sources */,
+				EABB38F716010F160009D8F7 /* EngineUser.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
