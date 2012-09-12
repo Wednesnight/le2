@@ -39,10 +39,10 @@
 		EAADB62D15FFABC4008F7450 /* Quad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAADB62B15FFABC4008F7450 /* Quad.cpp */; };
 		EAB2B90D15FE4703001CF4EF /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B90C15FE4703001CF4EF /* Context.cpp */; };
 		EAB2B90F15FE470A001CF4EF /* ContextMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAB2B90E15FE470A001CF4EF /* ContextMac.mm */; };
+		EABB38E01600CC990009D8F7 /* LEAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = EABB38DF1600CC990009D8F7 /* LEAppDelegate.mm */; };
 		EACD243815D7E48D00453F75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD243715D7E48D00453F75 /* Cocoa.framework */; };
 		EACD245A15D7E53300453F75 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD245915D7E53300453F75 /* OpenGL.framework */; };
 		EACD245C15D7E7E000453F75 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD245B15D7E7E000453F75 /* main.mm */; };
-		EACD245F15D7E7F700453F75 /* LEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD245E15D7E7F700453F75 /* LEAppDelegate.m */; };
 		EACD246215D7EEFD00453F75 /* LEGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACD246115D7EEF400453F75 /* LEGLView.mm */; };
 		EACD246E15D7EFEA00453F75 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACD246D15D7EFEA00453F75 /* QuartzCore.framework */; };
 		EACD247915D7F82100453F75 /* stb_image.c in Sources */ = {isa = PBXBuildFile; fileRef = EACD247115D7F82100453F75 /* stb_image.c */; };
@@ -142,6 +142,7 @@
 		EAB2B8FE15FE3DEE001CF4EF /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
 		EAB2B90C15FE4703001CF4EF /* Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Context.cpp; sourceTree = "<group>"; };
 		EAB2B90E15FE470A001CF4EF /* ContextMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContextMac.mm; sourceTree = "<group>"; };
+		EABB38DF1600CC990009D8F7 /* LEAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LEAppDelegate.mm; sourceTree = SOURCE_ROOT; };
 		EACD243315D7E48D00453F75 /* LostEngine2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostEngine2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACD243715D7E48D00453F75 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostEngine2-Info.plist"; sourceTree = "<group>"; };
@@ -149,7 +150,6 @@
 		EACD245915D7E53300453F75 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EACD245B15D7E7E000453F75 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = SOURCE_ROOT; };
 		EACD245D15D7E7F700453F75 /* LEAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEAppDelegate.h; sourceTree = SOURCE_ROOT; };
-		EACD245E15D7E7F700453F75 /* LEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		EACD246015D7EEF400453F75 /* LEGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEGLView.h; sourceTree = SOURCE_ROOT; };
 		EACD246115D7EEF400453F75 /* LEGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LEGLView.mm; sourceTree = SOURCE_ROOT; };
 		EACD246D15D7EFEA00453F75 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -242,7 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				EACD245D15D7E7F700453F75 /* LEAppDelegate.h */,
-				EACD245E15D7E7F700453F75 /* LEAppDelegate.m */,
+				EABB38DF1600CC990009D8F7 /* LEAppDelegate.mm */,
 				EACD246015D7EEF400453F75 /* LEGLView.h */,
 				EACD246115D7EEF400453F75 /* LEGLView.mm */,
 				EACD243F15D7E48D00453F75 /* LostEngine2-Info.plist */,
@@ -482,7 +482,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EACD245C15D7E7E000453F75 /* main.mm in Sources */,
-				EACD245F15D7E7F700453F75 /* LEAppDelegate.m in Sources */,
 				EACD246215D7EEFD00453F75 /* LEGLView.mm in Sources */,
 				EACD247915D7F82100453F75 /* stb_image.c in Sources */,
 				EACD249415D81A6800453F75 /* Log.cpp in Sources */,
@@ -533,6 +532,7 @@
 				EAADB62715FFA3BA008F7450 /* TruetypeFont.cpp in Sources */,
 				EAADB62A15FFA76B008F7450 /* Glyph.cpp in Sources */,
 				EAADB62D15FFABC4008F7450 /* Quad.cpp in Sources */,
+				EABB38E01600CC990009D8F7 /* LEAppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
