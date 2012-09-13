@@ -14,3 +14,18 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTH
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+#include "lost/FontManager.h"
+
+namespace lost
+{
+
+FontManager::FontManager()
+{
+}
+
+FontManager::~FontManager()
+{
+}
+
+
+}

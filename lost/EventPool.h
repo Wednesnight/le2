@@ -2,7 +2,8 @@
 #define LOST_EVENTPOOL_H
 
 #include "lost/Event.h"
-#include "tinythread.h"
+
+namespace tthread { class mutex; }
 
 namespace lost
 {
@@ -15,9 +16,9 @@ struct EventPool
   Event* borrowEvent();
   void returnEvent(Event* event);
   
-  uint32_t _poolSize;
-  Event* _events;
-  tthread::mutex _mutex;
+  size_t          _numEvents;
+  Event*          _events;
+  tthread::mutex* _mutex;
 };
 
 }

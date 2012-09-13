@@ -3,6 +3,8 @@
 
 #include "lost/Event.h"
 
+namespace tthread { class mutex; }
+
 namespace lost
 {
 
@@ -11,7 +13,11 @@ struct EventQueue
   EventQueue();
   ~EventQueue();
 
-  vector<Event*> _queue;
+  void addEvent(Event* event); // threadsafe, use this to add events to the
+  void returnAllEvents();
+
+  tthread::mutex* _mutex; // ignore this
+  vector<Event*> events; // read events directly from here in user code
 };
 
 }

@@ -1,43 +1,44 @@
 #import "LEWindow.h"
+#include "lost/Engine.h"
+#include "lost/EventPool.h"
+#include "lost/EventQueue.h"
 
 @implementation LEWindow
 
 -(void)keyDown:(NSEvent *)theEvent
 {
-  DOUT("");
+  lost::Event* event = lost::Engine::instance()->eventPool->borrowEvent();
+  event->base.type = lost::ET_KeyDownEvent;
+  lost::Engine::instance()->eventQueue->addEvent(event);
 }
 
 -(void)keyUp:(NSEvent *)theEvent
 {
-  DOUT("");
+  lost::Event* event = lost::Engine::instance()->eventPool->borrowEvent();
+  event->base.type = lost::ET_KeyUpEvent;
+  lost::Engine::instance()->eventQueue->addEvent(event);
 }
 
 - (void)mouseDown:(NSEvent *)theEvent
 {
-  DOUT("");
+  lost::Event* event = lost::Engine::instance()->eventPool->borrowEvent();
+  event->base.type = lost::ET_MouseDownEvent;
+  lost::Engine::instance()->eventQueue->addEvent(event);
 }
 
 - (void)mouseUp:(NSEvent *)theEvent
 {
-  DOUT("");
+  lost::Event* event = lost::Engine::instance()->eventPool->borrowEvent();
+  event->base.type = lost::ET_MouseUpEvent;
+  lost::Engine::instance()->eventQueue->addEvent(event);
 }
 
 - (void)mouseMoved:(NSEvent *)theEvent
 {
-  DOUT("");
+  lost::Event* event = lost::Engine::instance()->eventPool->borrowEvent();
+  event->base.type = lost::ET_MouseMoveEvent;
+  lost::Engine::instance()->eventQueue->addEvent(event);
 }
-
-- (void)mouseEntered:(NSEvent *)theEvent
-{
-  DOUT("");
-}
-
-- (void)mouseExited:(NSEvent *)theEvent
-{
-  DOUT("");
-}
-
-
 
 -(BOOL)canBecomeKeyWindow
 {

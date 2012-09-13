@@ -14,21 +14,27 @@ enum EventType
   ET_MouseMoveEvent
 };
 
+struct EventPool;
+
 struct BaseEvent
 {
-  EventType type;
-  bool      used;
+  EventType   type;
+  bool        used;
+  EventPool*  pool;
 };
 
 struct KeyEvent : BaseEvent
 {
+  int32_t keyCode;
 };
 
 struct MouseEvent : BaseEvent
 {
-  
+  s32 x;
+  s32 y;
 };
 
+// don't add default constructors to event classes, or the union won't compile
 union Event
 {
   BaseEvent base;

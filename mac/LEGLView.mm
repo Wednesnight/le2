@@ -6,7 +6,7 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTime
   LEGLView* glview = (LEGLView*)displayLinkContext;
   NSOpenGLContext* glcontext = [glview openGLContext];
   [glcontext makeCurrentContext];
-  lost::Engine::instance()->update();
+  lost::Engine::instance()->doUpdate();
   [glcontext flushBuffer];
   
   return kCVReturnSuccess;
