@@ -4,9 +4,11 @@
 
 @implementation LEAppDelegate
 
+@synthesize window;
+
 - (void) quitAction: (id)sender
 {
-  LEGLView* view = (LEGLView*)[_window contentView];
+  LEGLView* view = (LEGLView*)[window contentView];
   CVDisplayLinkStop([view displayLink]);
   lost::Engine::instance()->doShutdown();
   [[NSApplication sharedApplication] terminate: nil];
