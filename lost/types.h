@@ -70,6 +70,13 @@ namespace lost
   LE_SP(TruetypeFont);
   LE_SP(TextMesh);
   LE_SP(Quad);
+  
+  enum TextAlign {
+    ALIGN_LEFT = 0,
+    ALIGN_CENTER = 1,
+    ALIGN_RIGHT = 2
+  };
+
 }
 
 #endif

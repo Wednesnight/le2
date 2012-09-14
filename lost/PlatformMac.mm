@@ -47,6 +47,11 @@ namespace lost
 	  return timeformat;
 	}
 
+	// returns current time in milliseconds
+  long currentTimeMilliSeconds() {
+    return currentTimeMicroSeconds() / 1000;
+  }
+
 	// returns current time in microseconds
 	long currentTimeMicroSeconds()
 	{

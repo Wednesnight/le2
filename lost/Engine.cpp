@@ -3,6 +3,7 @@
 #include "lost/EventQueue.h"
 #include "lost/Context.h"
 #include "lost/FontManager.h"
+#include "lost/Platform.h"
 
 namespace lost
 {
@@ -15,6 +16,7 @@ Engine::Engine()
   eventQueue = new EventQueue;
   glContext = NULL; // created in startup, after OS specific GLcontext was created
   fontManager = NULL;// created in startup, after glContext was created, because it will use GL resources
+  lastFrameTimestamp = 0;
 }
 
 Engine::~Engine()
@@ -41,8 +43,10 @@ void Engine::doStartup()
 
 void Engine::doUpdate()
 {
-  update();
+  long deltaFrameTime = lastFrameTimestamp != 0 ? currentTimeMilliSeconds() - lastFrameTimestamp : 0;
+  update(deltaFrameTime);
   eventQueue->returnAllEvents();
+  lastFrameTimestamp = currentTimeMilliSeconds();
 }
 
 void Engine::doShutdown()
