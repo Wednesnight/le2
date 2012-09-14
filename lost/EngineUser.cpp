@@ -14,6 +14,7 @@
 #include "lost/Material.h"
 #include "lost/TextBuffer.h"
 #include "Canvas.h"
+#include "lost/Animation.h"
 
 namespace lost 
 {
@@ -24,6 +25,7 @@ namespace lost
   CanvasObjectPtr texturedQuad;
   CanvasObjectPtr rt1;
   CanvasObjectPtr rt2;
+  AnimationPtr anim;
 
   void Engine::startup()
   {
@@ -41,6 +43,11 @@ namespace lost
     coloredQuad = canvas->newRect(25, 100, 50, 50);
 
     texturedQuad = canvas->newImage("resources/rings.png", 100, 100);
+
+    anim.reset(new Animation(mainBundle));
+    anim->load("resources/greenman2_0.png",64,64,15);
+    anim->getQuad()->transform = MatrixTranslation(Vec3(300,300,0));
+    anim->play(LOOP, 0.05);  
   }
 
   long timeElapsed = 0;
@@ -56,6 +63,9 @@ namespace lost
       coloredQuad->isVisible = !coloredQuad->isVisible;
     }
     canvas->process(glContext);
+
+    anim->update((double)deltaFrameTime/1000.0);
+    glContext->draw(anim->getQuad());
   }
 
   void Engine::shutdown()

@@ -34,6 +34,7 @@ struct Quad : public Mesh
   
   Quad(const DataPtr& data, bool flip=true);
   Quad(const TexturePtr& tex, bool flip=true);
+  Quad(const TexturePtr& tex, const Rect& rect, bool flip);
   Quad(const vector<Rect>& rects);
   
   Quad(const vector<Rect>& rects,
@@ -51,7 +52,8 @@ struct Quad : public Mesh
   static QuadPtr create(const vector<Rect>& rects) { return QuadPtr(new Quad(rects)); }
   static QuadPtr create(const DataPtr& data, bool flip=true) { return QuadPtr(new Quad(data, flip)); }
   static QuadPtr create(const TexturePtr& tex, bool flip=true) { return QuadPtr(new Quad(tex, flip)); }
-  
+  static QuadPtr create(const TexturePtr& tex, const Rect& rect, bool flip=true) { return QuadPtr(new Quad(tex, rect, flip)); }
+    
   virtual ~Quad();
   
   void createIndices(uint32_t quadNum);

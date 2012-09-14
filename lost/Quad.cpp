@@ -93,6 +93,28 @@ Quad::Quad(const TexturePtr& tex, bool flip)
   createTexCoords(0,flip);    
 }
 
+Quad::Quad(const TexturePtr& tex, const Rect& rect, bool flip)
+{
+    BufferLayout layout;
+    layout.add(ET_vec2_f32, UT_position);
+    layout.add(ET_vec3_f32, UT_normal);
+    layout.add(ET_vec2_f32, UT_texcoord0);
+    this->resetBuffers(layout, ET_u16);
+    
+    indexBuffer->drawMode = GL_TRIANGLES;
+    this->material->textures.push_back(tex);
+    uint32_t numQuads = 1;
+    uint32_t numVertices = numQuads*4;
+    uint32_t numIndices = numQuads*6;
+    
+    this->vertexBuffer->reset(numVertices);
+    this->indexBuffer->reset(numIndices);
+    
+    createIndices(0);
+    createVertices(0, rect);
+    createTexCoords(0,flip);    
+}
+    
 Quad::Quad(const vector<Rect>& rects)
 {
   BufferLayout layout;

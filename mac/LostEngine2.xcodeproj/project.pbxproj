@@ -20,6 +20,7 @@
 		8D14B56716035151004399C4 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8D14B56616035151004399C4 /* Shader.vsh */; };
 		8D14B56A16035151004399C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D14B56916035151004399C4 /* ViewController.m */; };
 		8D14B56D16035151004399C4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D14B56B16035151004399C4 /* ViewController.xib */; };
+		254442B7160288A200D9D363 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254442B6160288A200D9D363 /* Animation.cpp */; };
 		EA0C315415FCDBFE00661552 /* ShaderPreprocessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C315215FCDBFE00661552 /* ShaderPreprocessor.cpp */; };
 		EA0C315815FCE86E00661552 /* StringAdditions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C315615FCDC0900661552 /* StringAdditions.cpp */; };
 		EA0C316415FD25A200661552 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C315E15FD25A100661552 /* Camera.cpp */; };
@@ -103,6 +104,8 @@
 		8D14B56816035151004399C4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8D14B56916035151004399C4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8D14B56C16035151004399C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		254442B6160288A200D9D363 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
+		254442B9160288D200D9D363 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		EA0C315215FCDBFE00661552 /* ShaderPreprocessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderPreprocessor.cpp; sourceTree = "<group>"; };
 		EA0C315315FCDBFE00661552 /* ShaderPreprocessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderPreprocessor.h; sourceTree = "<group>"; };
 		EA0C315615FCDC0900661552 /* StringAdditions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringAdditions.cpp; sourceTree = "<group>"; };
@@ -457,8 +460,8 @@
 				EA945F0D15F7A87C004EE290 /* HybridIndexBuffer.h */,
 				EA945F0E15F7A87C004EE290 /* HybridVertexBuffer.cpp */,
 				EA945F0F15F7A87C004EE290 /* HybridVertexBuffer.h */,
-				EA90FCC315E15C730071F358 /* lgl.cpp */,
 				EA90FCC215E15B4F0071F358 /* lgl.h */,
+				EA90FCC315E15C730071F358 /* lgl.cpp */,
 				EACD24B515D853D300453F75 /* lmath.h */,
 				EACD248D15D81A6800453F75 /* Log.cpp */,
 				EACD248E15D81A6800453F75 /* Log.h */,
@@ -523,6 +526,8 @@
 				EA945EF115F79F4B004EE290 /* VertexAttribute.h */,
 				EA945F0115F7A430004EE290 /* VertexShader.cpp */,
 				EA945F0215F7A430004EE290 /* VertexShader.h */,
+				254442B6160288A200D9D363 /* Animation.cpp */,
+				254442B9160288D200D9D363 /* Animation.h */,
 			);
 			name = lost;
 			path = ../lost;
@@ -705,6 +710,7 @@
 				EABB38F516010B670009D8F7 /* Engine.cpp in Sources */,
 				EABB38F716010F160009D8F7 /* EngineUser.cpp in Sources */,
 				8D14B50616029AD1004399C4 /* Canvas.cpp in Sources */,
+				254442B7160288A200D9D363 /* Animation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

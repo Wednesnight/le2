@@ -28,8 +28,7 @@ struct Engine
   EventQueue*   eventQueue; // global event queue, fed by OS specific part, thread safe, user code reads events
   Context*      glContext;
   FontManager*  fontManager;
-  
-  long lastFrameTimestamp;
+  long lastFrameTime;
 };
 
 }
