@@ -25,6 +25,8 @@ namespace lost
   CanvasObjectPtr texturedQuad;
   CanvasObjectPtr rt1;
   CanvasObjectPtr rt2;
+    
+  ResourceBundle mainBundle;
   AnimationPtr anim;
 
   void Engine::startup()
