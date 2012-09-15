@@ -48,10 +48,10 @@ namespace lost
 	}
 
 	// returns current time in milliseconds
-  long currentTimeMilliSeconds() {
-    return currentTimeMicroSeconds() / 1000;
-  }
-
+	long currentTimeMilliSeconds() {
+        return currentTimeMicroSeconds() / 1000;
+    }
+    
 	// returns current time in microseconds
 	long currentTimeMicroSeconds()
 	{

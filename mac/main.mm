@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
   [app setDelegate: appDelegate];
 
   // setup window and GL view
-  CGRect fr = CGRectMake(0, 0, 800, 600);
+  CGRect fr = CGRectMake(0, 0, 1024, 768);
   const NSOpenGLPixelFormatAttribute windowedAttributes[] =
   {
     NSOpenGLPFADoubleBuffer,

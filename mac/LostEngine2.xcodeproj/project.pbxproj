@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		254442B7160288A200D9D363 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254442B6160288A200D9D363 /* Animation.cpp */; };
 		8D14B50616029AD1004399C4 /* Canvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D14B50416029AD1004399C4 /* Canvas.cpp */; };
 		8DF374D41603725800DA0547 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D14B54E16035151004399C4 /* UIKit.framework */; };
 		8DF374D51603725800DA0547 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D14B55016035151004399C4 /* Foundation.framework */; };
@@ -179,6 +180,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		254442B6160288A200D9D363 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
+		254442B9160288D200D9D363 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		8D14B50416029AD1004399C4 /* Canvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Canvas.cpp; sourceTree = "<group>"; };
 		8D14B50516029AD1004399C4 /* Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
 		8D14B54E16035151004399C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -613,8 +616,8 @@
 				EA945F0D15F7A87C004EE290 /* HybridIndexBuffer.h */,
 				EA945F0E15F7A87C004EE290 /* HybridVertexBuffer.cpp */,
 				EA945F0F15F7A87C004EE290 /* HybridVertexBuffer.h */,
-				EA90FCC315E15C730071F358 /* lgl.cpp */,
 				EA90FCC215E15B4F0071F358 /* lgl.h */,
+				EA90FCC315E15C730071F358 /* lgl.cpp */,
 				EACD24B515D853D300453F75 /* lmath.h */,
 				EACD248D15D81A6800453F75 /* Log.cpp */,
 				EACD248E15D81A6800453F75 /* Log.h */,
@@ -631,11 +634,11 @@
 				EACD24A215D825A600453F75 /* PlatformMac.mm */,
 				EACD249915D81E4400453F75 /* PlatformPaths.h */,
 				EACD249A15D81E4400453F75 /* PlatformThread.h */,
+				EAADB62B15FFABC4008F7450 /* Quad.cpp */,
+				EAADB62C15FFABC4008F7450 /* Quad.h */,
 				EACD249B15D81E4400453F75 /* PlatformTime.h */,
 				EACD249C15D81E4400453F75 /* PlatformType.h */,
 				EACD249315D81A6800453F75 /* prefix-shared.h */,
-				EAADB62B15FFABC4008F7450 /* Quad.cpp */,
-				EAADB62C15FFABC4008F7450 /* Quad.h */,
 				EAADB62E15FFB7DD008F7450 /* Range.h */,
 				EACD24AF15D852B300453F75 /* Rect.cpp */,
 				EACD24AC15D8528A00453F75 /* Rect.h */,
@@ -680,6 +683,8 @@
 				EA945EF115F79F4B004EE290 /* VertexAttribute.h */,
 				EA945F0115F7A430004EE290 /* VertexShader.cpp */,
 				EA945F0215F7A430004EE290 /* VertexShader.h */,
+				254442B6160288A200D9D363 /* Animation.cpp */,
+				254442B9160288D200D9D363 /* Animation.h */,
 			);
 			name = lost;
 			path = ../lost;
@@ -957,6 +962,7 @@
 				8DF375731603743900DA0547 /* color.vs in Sources */,
 				8DF375761603743900DA0547 /* texture.fs in Sources */,
 				8DF375791603743900DA0547 /* texture.vs in Sources */,
+				254442B7160288A200D9D363 /* Animation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1123,6 +1129,7 @@
 				8DF374F11603725800DA0547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EACD242D15D7E48D00453F75 /* Build configuration list for PBXProject "LostEngine2" */ = {
 			isa = XCConfigurationList;

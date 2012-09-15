@@ -16,7 +16,7 @@ Engine::Engine()
   eventQueue = new EventQueue;
   glContext = NULL; // created in startup, after OS specific GLcontext was created
   fontManager = NULL;// created in startup, after glContext was created, because it will use GL resources
-  lastFrameTimestamp = 0;
+  lastFrameTime = 0;
 }
 
 Engine::~Engine()
@@ -43,10 +43,10 @@ void Engine::doStartup()
 
 void Engine::doUpdate()
 {
-  long deltaFrameTime = lastFrameTimestamp != 0 ? currentTimeMilliSeconds() - lastFrameTimestamp : 0;
-  update(deltaFrameTime);
+  long delta = lastFrameTime != 0 ? currentTimeMilliSeconds() - lastFrameTime : 0;
+  update(delta);
   eventQueue->returnAllEvents();
-  lastFrameTimestamp = currentTimeMilliSeconds();
+  lastFrameTime = currentTimeMilliSeconds();
 }
 
 void Engine::doShutdown()
