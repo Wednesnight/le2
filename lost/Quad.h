@@ -40,18 +40,14 @@ struct Quad : public Mesh
   Quad(const vector<Rect>& rects,
        TexturePtr tex,
        const vector<Rect>& pixelCoords,
-       bool flip);
-    
-  Quad(const vector<Rect>& rects,
-       TexturePtr tex,
-       const vector<Rect>& pixelCoords,
        bool flip,
-       int mod);
-  
+       bool singleFramed);
+    
   void init(const vector<Rect>& rects,
             TexturePtr tex,
             const vector<Rect>& pixelCoords,
-            bool flip);
+            bool flip,
+            bool singleFramed);
 
   static QuadPtr create() { return QuadPtr(new Quad()); }
   static QuadPtr create(const Rect& inRect) { return QuadPtr(new Quad(inRect)); }
@@ -59,11 +55,11 @@ struct Quad : public Mesh
   static QuadPtr create(const DataPtr& data, bool flip=true) { return QuadPtr(new Quad(data, flip)); }
   static QuadPtr create(const TexturePtr& tex, bool flip=true) { return QuadPtr(new Quad(tex, flip)); }
   static QuadPtr create(const TexturePtr& tex, const Rect& rect, bool flip=true) { return QuadPtr(new Quad(tex, rect, flip)); }
-  static QuadPtr create(const vector<Rect>& rects,TexturePtr tex,const vector<Rect>& pixelCoords) { return QuadPtr(new Quad(rects, tex, pixelCoords, true)); }
+  static QuadPtr create(const vector<Rect>& rects,TexturePtr tex,const vector<Rect>& pixelCoords, bool flip = true, bool singleFramed = false) { return QuadPtr(new Quad(rects, tex, pixelCoords, flip, singleFramed)); }
     
   virtual ~Quad();
   
-  void createIndices(uint32_t quadNum);
+  void createIndices(uint32_t quadNum, uint32_t indexOffset = 0);
   void createVertices(uint32_t quadNum, const Rect& inRect);
   void updateSize(const Vec2& size);
 

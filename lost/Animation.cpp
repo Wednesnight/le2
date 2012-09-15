@@ -46,7 +46,7 @@ namespace lost {
     void Animation::load(std::string _textureSrc,int32_t _frameWidth,int32_t _frameHeight,int32_t _frameCount) {
         
         m_texture = m_mainBundle.loadTexture(_textureSrc);
-        m_shader = m_mainBundle.loadShader("resources/glsl/texture");
+        m_shader = m_mainBundle.loadShader("texture");
         
         m_frameWidth = _frameWidth;
         m_frameHeight = _frameHeight;

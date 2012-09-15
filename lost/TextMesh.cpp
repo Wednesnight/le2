@@ -26,7 +26,7 @@ TextMesh::TextMesh() : Quad()
 
 TextMesh::TextMesh(const vector<Rect>& rects,
              TexturePtr tex,
-             const vector<Rect>& pixelCoords) : Quad(rects, tex, pixelCoords, false)
+             const vector<Rect>& pixelCoords) : Quad(rects, tex, pixelCoords, false, false)
 {
 }
 

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		254442B7160288A200D9D363 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254442B6160288A200D9D363 /* Animation.cpp */; };
 		8D14B50616029AD1004399C4 /* Canvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D14B50416029AD1004399C4 /* Canvas.cpp */; };
+		8D513BD41604925200FF03D4 /* greenman2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BD31604925200FF03D4 /* greenman2_0.png */; };
+		8D513BD51604925200FF03D4 /* greenman2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BD31604925200FF03D4 /* greenman2_0.png */; };
+		8DCEB31A160491D7002D6CB3 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254442B6160288A200D9D363 /* Animation.cpp */; };
 		8DF374D41603725800DA0547 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D14B54E16035151004399C4 /* UIKit.framework */; };
 		8DF374D51603725800DA0547 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D14B55016035151004399C4 /* Foundation.framework */; };
 		8DF374D61603725800DA0547 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D14B55216035151004399C4 /* CoreGraphics.framework */; };
@@ -200,6 +203,7 @@
 		8D14B56C16035151004399C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		8D14B5A616035B60004399C4 /* ContextIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContextIOS.mm; sourceTree = "<group>"; };
 		8D14B5A816035D18004399C4 /* PlatformIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlatformIOS.mm; sourceTree = "<group>"; };
+		8D513BD31604925200FF03D4 /* greenman2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenman2_0.png; sourceTree = "<group>"; };
 		8DF374D21603725800DA0547 /* ReRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF375321603743900DA0547 /* COPYRIGHT.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYRIGHT.TXT; sourceTree = "<group>"; };
 		8DF375331603743900DA0547 /* local.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = local.conf; sourceTree = "<group>"; };
@@ -418,6 +422,7 @@
 				8DF375301603743900DA0547 /* fonts */,
 				8DF375401603743900DA0547 /* glsl */,
 				8DF375451603743900DA0547 /* rings.png */,
+				8D513BD31604925200FF03D4 /* greenman2_0.png */,
 			);
 			name = resources;
 			path = ../resources;
@@ -564,6 +569,8 @@
 		EACD248C15D81A6800453F75 /* lost */ = {
 			isa = PBXGroup;
 			children = (
+				254442B6160288A200D9D363 /* Animation.cpp */,
+				254442B9160288D200D9D363 /* Animation.h */,
 				EACD24A815D851AB00453F75 /* Bitmap.cpp */,
 				EACD24A915D851AB00453F75 /* Bitmap.h */,
 				EAADB60D15FF97FD008F7450 /* BitmapPacker.cpp */,
@@ -683,8 +690,6 @@
 				EA945EF115F79F4B004EE290 /* VertexAttribute.h */,
 				EA945F0115F7A430004EE290 /* VertexShader.cpp */,
 				EA945F0215F7A430004EE290 /* VertexShader.h */,
-				254442B6160288A200D9D363 /* Animation.cpp */,
-				254442B9160288D200D9D363 /* Animation.h */,
 			);
 			name = lost;
 			path = ../lost;
@@ -782,6 +787,7 @@
 				8DF3756C1603743900DA0547 /* VeraSe.ttf in Resources */,
 				8DF3756F1603743900DA0547 /* VeraSeBd.ttf in Resources */,
 				8DF3757E1603743900DA0547 /* rings.png in Resources */,
+				8D513BD51604925200FF03D4 /* greenman2_0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +810,7 @@
 				8DF3756A1603743900DA0547 /* VeraSe.ttf in Resources */,
 				8DF3756D1603743900DA0547 /* VeraSeBd.ttf in Resources */,
 				8DF3757C1603743900DA0547 /* rings.png in Resources */,
+				8D513BD41604925200FF03D4 /* greenman2_0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,6 +899,7 @@
 				8DF375751603743900DA0547 /* color.vs in Sources */,
 				8DF375781603743900DA0547 /* texture.fs in Sources */,
 				8DF3757B1603743900DA0547 /* texture.vs in Sources */,
+				8DCEB31A160491D7002D6CB3 /* Animation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

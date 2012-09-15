@@ -151,7 +151,7 @@ void render(const utf32_string& inText, const vector<Range>& lines, const FontPt
     }
   }
   
-  target->init(characterRects, font->atlas, pixelCoordRects, false);
+  target->init(characterRects, font->atlas, pixelCoordRects, false, false);
   target->min = pmin;
   target->max = pmax;
   target->size.width = (pmax.x-pmin.x)+1;  

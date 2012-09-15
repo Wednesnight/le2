@@ -49,27 +49,6 @@ void CanvasObject::remove(CanvasObjectPtr& child) {
   children.remove(child);
 }
 
-Spritesheet::Spritesheet(const TexturePtr& texture, const vector<Rect>& rects) {
-  quad.reset(new Quad(rects, texture, rects, false));
-  index = 0;
-/*
-  this->setIndex(indexOffset+0, vertexOffset + 0);
-  this->setIndex(indexOffset+1, vertexOffset + 1);
-  this->setIndex(indexOffset+2, vertexOffset + 2);
-  this->setIndex(indexOffset+3, vertexOffset + 2);
-  this->setIndex(indexOffset+4, vertexOffset + 3);
-  this->setIndex(indexOffset+5, vertexOffset + 0);
-*/
-}
-
-void Spritesheet::render(Context* context) {
-  if (quad) {
-    quad->createIndices(index);
-    quad->transform = MatrixTranslation(Vec3(x, y, 0)) * MatrixScaling(Vec3(xScale, yScale, 1)) * MatrixRotation(Vec3(0, 0, rotation));
-    context->draw(quad);
-  }
-}
-
 Canvas::Canvas()
 {
   colorShader = bundle.loadShader("color");
