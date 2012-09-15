@@ -107,12 +107,15 @@ namespace lost
     tileLayer.reset(new CanvasObject());
     canvas->insert(tileLayer);
     
+    TexturePtr bleedTexture = mainBundle.loadTexture("laterne.png");
+    
     srand ( time(NULL) );
     int LEVEL_LENGTH = 25;
     int offset = 0;
     for (int idx = 0; idx < LEVEL_LENGTH; ++idx) {
       TexturePtr tex = tileFiles[rand() % tileFiles.size()];
       canvas->newImage(tex, offset, groundTexture->dataHeight, tileLayer);
+      CanvasObjectPtr bleed = canvas->newImage(bleedTexture, offset - (int)(bleedTexture->dataWidth*.5f), groundTexture->dataHeight+45, tileLayer);
       offset += tex->dataWidth;
     }
     
@@ -125,9 +128,7 @@ namespace lost
     glContext->clear(GL_COLOR_BUFFER_BIT |GL_DEPTH_BUFFER_BIT);
     
     //First Camera
-    for (int idx = 0; idx < tileLayer->childCount(); ++idx) {
-      (*tileLayer)[idx]->x += ((double)deltaFrameTime / 1000.0) * -250;
-    }
+    tileLayer->x += ((double)deltaFrameTime / 1000.0) * -250;
     glContext->camera(camPlayer1);
     timeElapsed += deltaFrameTime;
     if (timeElapsed >= 500) {
@@ -140,6 +141,7 @@ namespace lost
     //Second Camera
     glContext->camera(camPlayer2);
     canvas->process(glContext);
+    canvas->render(glContext);
     
     anim->update((double)deltaFrameTime/1000.0);
       

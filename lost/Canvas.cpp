@@ -41,7 +41,7 @@ void CanvasObject::process(Context* context,Matrix _parentTransform) {
 }
 
 void CanvasObject::render(Context* context) {
-  if (isVisible) {
+  if (isEnabled && isVisible) {
   
     if (mesh) { context->draw(mesh); }
     
