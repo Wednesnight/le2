@@ -30,9 +30,17 @@ public:
   CanvasObject(const MeshPtr& mesh);
 
   void process(Context* context);
+  virtual void render(Context* context);
   
   void insert(CanvasObjectPtr& child);
   void remove(CanvasObjectPtr& child);
+};
+
+struct Spritesheet : public CanvasObject {
+  QuadPtr quad;
+  unsigned int index;
+  Spritesheet(const TexturePtr& texture, const vector<Rect>& rects);
+  void render(Context* context);
 };
 
 struct Canvas : public CanvasObject {
@@ -59,7 +67,7 @@ public:
                            CanvasObjectPtr parent = CanvasObjectPtr());
 
   CanvasObjectPtr newText(const string& text, float x = .0f, float y = .0f,
-                          float width = .0f, const string& font = "resources/fonts/vera/Vera.ttf",
+                          float width = .0f, const string& font = "Vera.ttf",
                           int fontSize = 18, TextAlign align = ALIGN_LEFT,
                           CanvasObjectPtr parent = CanvasObjectPtr());
   

@@ -11,7 +11,11 @@ enum EventType
   ET_KeyUpEvent,
   ET_MouseDownEvent,
   ET_MouseUpEvent,
-  ET_MouseMoveEvent
+  ET_MouseMoveEvent,
+  ET_TouchBegan,
+  ET_TouchMoved,
+  ET_TouchCancelled,
+  ET_TouchEnded
 };
 
 struct EventPool;

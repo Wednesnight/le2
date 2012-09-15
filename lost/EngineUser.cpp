@@ -31,7 +31,7 @@ namespace lost
     canvas = Canvas::create();
 
     rt2 = canvas->newText("This here is a relatively long text, that's hopefully gonna be rendered in multiple lines AND right aligned!",
-                          300, 300, 200, "resources/fonts/vera/Vera.ttf", 28, ALIGN_RIGHT);
+                          300, 300, 200, "Vera.ttf", 28, ALIGN_RIGHT);
     rt2->rotation = -15;
 //    rt2->xScale = 2;
 //    rt2->yScale = 2;
@@ -40,7 +40,7 @@ namespace lost
 
     coloredQuad = canvas->newRect(25, 100, 50, 50);
 
-    texturedQuad = canvas->newImage("resources/rings.png", 100, 100);
+    texturedQuad = canvas->newImage("rings.png", 100, 100);
   }
 
   long timeElapsed = 0;
