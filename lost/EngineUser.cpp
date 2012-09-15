@@ -33,9 +33,13 @@ namespace lost
     
   QuadPtr crazyQuad;
   TexturePtr crazyQuadTexture;  
+  
+  CanvasObjectPtr tileLayer;
 
   void Engine::startup()
   {
+    glContext->clearColor(Color(.42f, .64f, .82f));
+
     camPlayer1 = Camera2D::create(Rect(0,0,1024,384));
     camPlayer2 = Camera2D::create(Rect(0,384,1024,384));
     camPlayer2->projectionMatrix() = MatrixRotZ(180) * camPlayer2->projectionMatrix();
@@ -47,12 +51,16 @@ namespace lost
     rt2->rotation = -15;
 //    rt2->xScale = 2;
 //    rt2->yScale = 2;
+    rt2->isEnabled = false;
 
     rt1 = canvas->newText("I vant to drink your blood!", 50, 50);
+    rt1->isEnabled = false;
 
     coloredQuad = canvas->newRect(25, 100, 50, 50);
+    coloredQuad->isEnabled = false;
 
     texturedQuad = canvas->newImage("rings.png", 100, 100);
+    texturedQuad->isEnabled = false;
 
     
       
@@ -68,40 +76,59 @@ namespace lost
       
     anim->getQuad()->transform = MatrixTranslation(Vec3(30,30,0));
       
-      vector<Rect> rects;
-      Rect rect1(0,0,64,64);
-      rects.push_back(rect1);
-      
-      Rect rect2(0,0,64,64);
-      rects.push_back(rect2);
-      
-      
-      vector<Rect> pixelCoords;
-      Rect pc1(0,0,64,64);
-      pixelCoords.push_back(pc1);
-      
-      Rect pc2(128,128,64,64);
-      pixelCoords.push_back(pc2);
-      
-      crazyQuadTexture = mainBundle.loadTexture("greenman2_0.png");
-      crazyQuad = Quad::create(rects,crazyQuadTexture,pixelCoords);
-      crazyQuad->material->shader = mainBundle.loadShader("texture");
-      crazyQuad->material->color = whiteColor;
-      crazyQuad->material->blendNormal();
-      crazyQuad->transform = MatrixTranslation(Vec3(130,130,0));
-      
+    vector<Rect> rects;
+    Rect rect1(0,0,64,64);
+    rects.push_back(rect1);
+    
+    Rect rect2(0,0,64,64);
+    rects.push_back(rect2);
+    
+    
+    vector<Rect> pixelCoords;
+    Rect pc1(0,0,64,64);
+    pixelCoords.push_back(pc1);
+    
+    Rect pc2(128,128,64,64);
+    pixelCoords.push_back(pc2);
+    
+    crazyQuadTexture = mainBundle.loadTexture("greenman2_0.png");
+    crazyQuad = Quad::create(rects,crazyQuadTexture,pixelCoords);
+    crazyQuad->material->shader = mainBundle.loadShader("texture");
+    crazyQuad->material->color = whiteColor;
+    crazyQuad->material->blendNormal();
+    crazyQuad->transform = MatrixTranslation(Vec3(130,130,0));
+
+    TexturePtr groundTexture = mainBundle.loadTexture("layer1.png");
+    canvas->newImage(groundTexture);
+
+    vector<TexturePtr> tileFiles;
+    tileFiles.push_back(mainBundle.loadTexture("layer2.png"));
+    
+    tileLayer.reset(new CanvasObject());
+    canvas->insert(tileLayer);
+    
+    srand ( time(NULL) );
+    int LEVEL_LENGTH = 25;
+    int offset = 0;
+    for (int idx = 0; idx < LEVEL_LENGTH; ++idx) {
+      TexturePtr tex = tileFiles[rand() % tileFiles.size()];
+      canvas->newImage(tex, offset, groundTexture->dataHeight, tileLayer);
+      offset += tex->dataWidth;
+    }
+    
   }
 
   long timeElapsed = 0;
 
   void Engine::update(long deltaFrameTime)
-  {
-    glContext->clearColor(redColor);
+  {    
+    glContext->clear(GL_COLOR_BUFFER_BIT |GL_DEPTH_BUFFER_BIT);
     
     //First Camera
+    for (int idx = 0; idx < tileLayer->childCount(); ++idx) {
+      (*tileLayer)[idx]->x += ((double)deltaFrameTime / 1000.0) * -250;
+    }
     glContext->camera(camPlayer1);
-      
-    glContext->clear(GL_COLOR_BUFFER_BIT |GL_DEPTH_BUFFER_BIT);
     timeElapsed += deltaFrameTime;
     if (timeElapsed >= 500) {
       timeElapsed = 0;
@@ -111,17 +138,18 @@ namespace lost
     
     //Second Camera
     glContext->camera(camPlayer2);
+    canvas->process(glContext);
     
     anim->update((double)deltaFrameTime/1000.0);
       
-    glContext->draw(anim->getQuad());   
+    //glContext->draw(anim->getQuad());   
     
     crazyQuad->createIndices(0);
     crazyQuad->transform = MatrixTranslation(Vec3(130,130,0));
-    glContext->draw(crazyQuad);   
+    //glContext->draw(crazyQuad);   
     crazyQuad->createIndices(1);
     crazyQuad->transform = MatrixTranslation(Vec3(194,130,0));
-    glContext->draw(crazyQuad);   
+    //glContext->draw(crazyQuad);   
   }
 
   void Engine::shutdown()

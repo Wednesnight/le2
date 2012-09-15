@@ -11,6 +11,12 @@
 		8D14B50616029AD1004399C4 /* Canvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D14B50416029AD1004399C4 /* Canvas.cpp */; };
 		8D513BD41604925200FF03D4 /* greenman2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BD31604925200FF03D4 /* greenman2_0.png */; };
 		8D513BD51604925200FF03D4 /* greenman2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BD31604925200FF03D4 /* greenman2_0.png */; };
+		8D513BD81604A53500FF03D4 /* panorama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BD71604A53500FF03D4 /* panorama.jpg */; };
+		8D513BD91604A53500FF03D4 /* panorama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BD71604A53500FF03D4 /* panorama.jpg */; };
+		8D513BDC1604AC5100FF03D4 /* layer1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BDA1604AC5100FF03D4 /* layer1.png */; };
+		8D513BDD1604AC5100FF03D4 /* layer1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BDA1604AC5100FF03D4 /* layer1.png */; };
+		8D513BDE1604AC5100FF03D4 /* layer2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BDB1604AC5100FF03D4 /* layer2.png */; };
+		8D513BDF1604AC5100FF03D4 /* layer2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BDB1604AC5100FF03D4 /* layer2.png */; };
 		8DCEB31A160491D7002D6CB3 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254442B6160288A200D9D363 /* Animation.cpp */; };
 		8DF374D41603725800DA0547 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D14B54E16035151004399C4 /* UIKit.framework */; };
 		8DF374D51603725800DA0547 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D14B55016035151004399C4 /* Foundation.framework */; };
@@ -204,6 +210,9 @@
 		8D14B5A616035B60004399C4 /* ContextIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContextIOS.mm; sourceTree = "<group>"; };
 		8D14B5A816035D18004399C4 /* PlatformIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PlatformIOS.mm; sourceTree = "<group>"; };
 		8D513BD31604925200FF03D4 /* greenman2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenman2_0.png; sourceTree = "<group>"; };
+		8D513BD71604A53500FF03D4 /* panorama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panorama.jpg; sourceTree = "<group>"; };
+		8D513BDA1604AC5100FF03D4 /* layer1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layer1.png; sourceTree = "<group>"; };
+		8D513BDB1604AC5100FF03D4 /* layer2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layer2.png; sourceTree = "<group>"; };
 		8DF374D21603725800DA0547 /* ReRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF375321603743900DA0547 /* COPYRIGHT.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYRIGHT.TXT; sourceTree = "<group>"; };
 		8DF375331603743900DA0547 /* local.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = local.conf; sourceTree = "<group>"; };
@@ -423,6 +432,9 @@
 				8DF375401603743900DA0547 /* glsl */,
 				8DF375451603743900DA0547 /* rings.png */,
 				8D513BD31604925200FF03D4 /* greenman2_0.png */,
+				8D513BD71604A53500FF03D4 /* panorama.jpg */,
+				8D513BDA1604AC5100FF03D4 /* layer1.png */,
+				8D513BDB1604AC5100FF03D4 /* layer2.png */,
 			);
 			name = resources;
 			path = ../resources;
@@ -788,6 +800,9 @@
 				8DF3756F1603743900DA0547 /* VeraSeBd.ttf in Resources */,
 				8DF3757E1603743900DA0547 /* rings.png in Resources */,
 				8D513BD51604925200FF03D4 /* greenman2_0.png in Resources */,
+				8D513BD91604A53500FF03D4 /* panorama.jpg in Resources */,
+				8D513BDD1604AC5100FF03D4 /* layer1.png in Resources */,
+				8D513BDF1604AC5100FF03D4 /* layer2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,6 +826,9 @@
 				8DF3756D1603743900DA0547 /* VeraSeBd.ttf in Resources */,
 				8DF3757C1603743900DA0547 /* rings.png in Resources */,
 				8D513BD41604925200FF03D4 /* greenman2_0.png in Resources */,
+				8D513BD81604A53500FF03D4 /* panorama.jpg in Resources */,
+				8D513BDC1604AC5100FF03D4 /* layer1.png in Resources */,
+				8D513BDE1604AC5100FF03D4 /* layer2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

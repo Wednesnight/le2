@@ -7,10 +7,7 @@
 #include "Rect.h"
 #include "Bundle.h"
 
-#include <list>
-
 using namespace lost;
-using namespace std;
 
 struct CanvasObject;
 typedef shared_ptr<CanvasObject> CanvasObjectPtr;
@@ -21,7 +18,7 @@ typedef shared_ptr<Canvas> CanvasPtr;
 struct CanvasObject {
 private:
   MeshPtr mesh;
-  std::list<CanvasObjectPtr> children;
+  vector<CanvasObjectPtr> children;
 public:
   bool isVisible, isEnabled;
   float x, y, xScale, yScale, rotation;
@@ -34,6 +31,15 @@ public:
   
   void insert(CanvasObjectPtr& child);
   void remove(CanvasObjectPtr& child);
+  
+  unsigned int childCount() {
+    return children.size();
+  }
+  
+  const CanvasObjectPtr& operator[](unsigned int index) {
+    return children[index];
+  }
+
 };
 
 struct Spritesheet : public CanvasObject {
@@ -64,6 +70,9 @@ public:
                           CanvasObjectPtr parent = CanvasObjectPtr());
   
   CanvasObjectPtr newImage(const string& path, float x = .0f, float y = .0f,
+                           CanvasObjectPtr parent = CanvasObjectPtr());
+
+  CanvasObjectPtr newImage(const TexturePtr& image, float x = .0f, float y = .0f,
                            CanvasObjectPtr parent = CanvasObjectPtr());
 
   CanvasObjectPtr newText(const string& text, float x = .0f, float y = .0f,

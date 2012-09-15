@@ -30,7 +30,7 @@ CanvasObject::CanvasObject(const MeshPtr& mesh)
 void CanvasObject::process(Context* context) {
   if (isEnabled) {
     render(context);
-    for (std::list<CanvasObjectPtr>::iterator idx = children.begin(); idx != children.end(); ++idx) {
+    for (vector<CanvasObjectPtr>::iterator idx = children.begin(); idx != children.end(); ++idx) {
       (*idx)->process(context);
     }
   }
@@ -48,7 +48,12 @@ void CanvasObject::insert(CanvasObjectPtr& child) {
 }
 
 void CanvasObject::remove(CanvasObjectPtr& child) {
-  children.remove(child);
+  for (vector<CanvasObjectPtr>::iterator idx = children.begin(); idx != children.end(); ++idx) {
+    if (child == *idx) {
+      children.erase(idx);
+      break;
+    }
+  }
 }
 
 Canvas::Canvas()
@@ -75,8 +80,11 @@ CanvasObjectPtr Canvas::newRect(float x, float y, float width, float height, Can
 }
 
 CanvasObjectPtr Canvas::newImage(const string& path, float x, float y, CanvasObjectPtr parent) {
-	TexturePtr texture = bundle.loadTexture(path);
-  MeshPtr texturedQuad = Quad::create(texture);
+	return newImage(bundle.loadTexture(path), x, y, parent);
+}
+
+CanvasObjectPtr Canvas::newImage(const TexturePtr& image, float x, float y, CanvasObjectPtr parent) {
+  MeshPtr texturedQuad = Quad::create(image);
   texturedQuad->material->shader = textureShader;
   texturedQuad->material->color = defaultColor;
   texturedQuad->material->blendNormal();
