@@ -314,5 +314,10 @@ MatrixScaling::MatrixScaling(const Vec3& scaling)
 {
   initScaling(scaling);
 }
+    
+MatrixIdentity::MatrixIdentity()
+{
+    initIdentity();
+}
 }
 

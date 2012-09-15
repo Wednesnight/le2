@@ -117,6 +117,11 @@ struct MatrixScaling : public Matrix
 {
   MatrixScaling(const Vec3& scaling);
 };
+    
+struct MatrixIdentity : public Matrix
+{
+    MatrixIdentity();  
+};
 }
 
 #endif

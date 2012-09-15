@@ -80,11 +80,11 @@ namespace lost
       Rect pc1(0,0,64,64);
       pixelCoords.push_back(pc1);
       
-      Rect pc2(128,128,64,64);
+      Rect pc2(128,192,64,64);
       pixelCoords.push_back(pc2);
       
       crazyQuadTexture = mainBundle.loadTexture("greenman2_0.png");
-      crazyQuad = Quad::create(rects,crazyQuadTexture,pixelCoords);
+      crazyQuad = Quad::create(rects,crazyQuadTexture,pixelCoords,true,true);
       crazyQuad->material->shader = mainBundle.loadShader("texture");
       crazyQuad->material->color = whiteColor;
       crazyQuad->material->blendNormal();
@@ -108,6 +108,7 @@ namespace lost
       coloredQuad->isVisible = !coloredQuad->isVisible;
     }
     canvas->process(glContext);
+    canvas->render(glContext);
     
     //Second Camera
     glContext->camera(camPlayer2);
