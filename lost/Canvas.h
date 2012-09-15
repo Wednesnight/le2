@@ -7,47 +7,15 @@
 #include "Rect.h"
 #include "Bundle.h"
 
-using namespace lost;
+#include "CanvasObject.h"
 
-struct CanvasObject;
-typedef shared_ptr<CanvasObject> CanvasObjectPtr;
+
+using namespace lost;
 
 struct Canvas;
 typedef shared_ptr<Canvas> CanvasPtr;
 
-struct CanvasObject {
-protected:
-  MeshPtr mesh;
-  vector<CanvasObjectPtr> children;
-public:
-  bool isVisible, isEnabled;
-  float x, y, xScale, yScale, rotation;
-  
-  CanvasObject();
-  CanvasObject(const MeshPtr& mesh);
 
-  virtual void process(Context* context, double deltaTime, Matrix _parentTransform = MatrixIdentity());
-  virtual void render(Context* context);
-  
-  void insert(CanvasObjectPtr& child);
-  void remove(CanvasObjectPtr& child);
-  
-  unsigned int childCount() {
-    return children.size();
-  }
-  
-  const CanvasObjectPtr& operator[](unsigned int index) {
-    return children[index];
-  }
-
-};
-
-struct Spritesheet : public CanvasObject {
-  QuadPtr quad;
-  unsigned int index;
-  Spritesheet(const TexturePtr& texture, const vector<Rect>& rects);
-  void render(Context* context);
-};
 
 struct Canvas : public CanvasObject {
 
@@ -80,6 +48,8 @@ public:
                           int fontSize = 18, TextAlign align = ALIGN_LEFT,
                           CanvasObjectPtr parent = CanvasObjectPtr());
   
+  CanvasObjectPtr newSky(const TexturePtr& image, float x = .0f, float y = .0f,
+                          CanvasObjectPtr parent = CanvasObjectPtr());
 };
 
 #endif

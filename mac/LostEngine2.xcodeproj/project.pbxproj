@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		251DA5811604BC480081F999 /* Sky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251DA57F1604BC480081F999 /* Sky.cpp */; };
 		251DA5821604BC480081F999 /* Sky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251DA57F1604BC480081F999 /* Sky.cpp */; };
+		251DA58B1604C6D00081F999 /* CanvasObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251DA58A1604C6D00081F999 /* CanvasObject.cpp */; };
+		251DA58C1604C6D00081F999 /* CanvasObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251DA58A1604C6D00081F999 /* CanvasObject.cpp */; };
 		254442B7160288A200D9D363 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254442B6160288A200D9D363 /* Animation.cpp */; };
 		8D14B50616029AD1004399C4 /* Canvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D14B50416029AD1004399C4 /* Canvas.cpp */; };
 		8D513BD41604925200FF03D4 /* greenman2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BD31604925200FF03D4 /* greenman2_0.png */; };
@@ -195,6 +197,8 @@
 /* Begin PBXFileReference section */
 		251DA57F1604BC480081F999 /* Sky.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sky.cpp; sourceTree = "<group>"; };
 		251DA5801604BC480081F999 /* Sky.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sky.h; sourceTree = "<group>"; };
+		251DA58A1604C6D00081F999 /* CanvasObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CanvasObject.cpp; sourceTree = "<group>"; };
+		251DA58D1604C6ED0081F999 /* CanvasObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasObject.h; sourceTree = "<group>"; };
 		254442B6160288A200D9D363 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
 		254442B9160288D200D9D363 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		8D14B50416029AD1004399C4 /* Canvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Canvas.cpp; sourceTree = "<group>"; };
@@ -617,6 +621,8 @@
 				EA0C316115FD25A100661552 /* Camera2D.h */,
 				EA0C316215FD25A100661552 /* Camera3D.cpp */,
 				EA0C316315FD25A100661552 /* Camera3D.h */,
+				251DA58A1604C6D00081F999 /* CanvasObject.cpp */,
+				251DA58D1604C6ED0081F999 /* CanvasObject.h */,
 				8D14B50416029AD1004399C4 /* Canvas.cpp */,
 				8D14B50516029AD1004399C4 /* Canvas.h */,
 				EACD24AD15D852AC00453F75 /* Color.cpp */,
@@ -939,6 +945,7 @@
 				8DF3757B1603743900DA0547 /* texture.vs in Sources */,
 				8DCEB31A160491D7002D6CB3 /* Animation.cpp in Sources */,
 				251DA5821604BC480081F999 /* Sky.cpp in Sources */,
+				251DA58C1604C6D00081F999 /* CanvasObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,6 +1018,7 @@
 				8DF375791603743900DA0547 /* texture.vs in Sources */,
 				254442B7160288A200D9D363 /* Animation.cpp in Sources */,
 				251DA5811604BC480081F999 /* Sky.cpp in Sources */,
+				251DA58B1604C6D00081F999 /* CanvasObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

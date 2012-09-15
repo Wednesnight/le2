@@ -22,6 +22,10 @@ namespace lost
     
     struct Sky : public CanvasObject {
     public:
+        
+        Sky() : CanvasObject() {}
+        Sky(const MeshPtr& mesh) : CanvasObject(mesh) {}
+        
         void process(Context* context, double deltaTime,Matrix _parentTransform = MatrixIdentity());
     };
 }
