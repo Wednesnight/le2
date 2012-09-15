@@ -26,7 +26,7 @@ public:
   CanvasObject();
   CanvasObject(const MeshPtr& mesh);
 
-  void process(Context* context);
+  void process(Context* context,Matrix _parentTransform = MatrixIdentity());
   virtual void render(Context* context);
   
   void insert(CanvasObjectPtr& child);

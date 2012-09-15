@@ -135,6 +135,7 @@ namespace lost
       coloredQuad->isVisible = !coloredQuad->isVisible;
     }
     canvas->process(glContext);
+    canvas->render(glContext);
     
     //Second Camera
     glContext->camera(camPlayer2);
