@@ -27,7 +27,7 @@ CanvasObject::CanvasObject(const MeshPtr& mesh)
   rotation = 0;
 }
 
-void CanvasObject::process(Context* context,Matrix _parentTransform) {
+void CanvasObject::process(Context* context, double deltaTime, Matrix _parentTransform) {
   if (isEnabled) {
     
       Matrix m = MatrixTranslation(Vec3(x, y, 0)) * MatrixScaling(Vec3(xScale, yScale, 1)) * MatrixRotation(Vec3(0, 0, rotation)) * _parentTransform;
@@ -36,7 +36,7 @@ void CanvasObject::process(Context* context,Matrix _parentTransform) {
     }
       
     for (std::list<CanvasObjectPtr>::iterator idx = children.begin(); idx != children.end(); ++idx) {
-      (*idx)->process(context,m);
+      (*idx)->process(context,deltaTime,m);
     }
   }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251DA5811604BC480081F999 /* Sky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251DA57F1604BC480081F999 /* Sky.cpp */; };
+		251DA5821604BC480081F999 /* Sky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251DA57F1604BC480081F999 /* Sky.cpp */; };
 		254442B7160288A200D9D363 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254442B6160288A200D9D363 /* Animation.cpp */; };
 		8D14B50616029AD1004399C4 /* Canvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D14B50416029AD1004399C4 /* Canvas.cpp */; };
 		8D513BD41604925200FF03D4 /* greenman2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D513BD31604925200FF03D4 /* greenman2_0.png */; };
@@ -183,6 +185,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		251DA57F1604BC480081F999 /* Sky.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sky.cpp; sourceTree = "<group>"; };
+		251DA5801604BC480081F999 /* Sky.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sky.h; sourceTree = "<group>"; };
 		254442B6160288A200D9D363 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
 		254442B9160288D200D9D363 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		8D14B50416029AD1004399C4 /* Canvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Canvas.cpp; sourceTree = "<group>"; };
@@ -392,6 +396,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		251DA57E1604BC480081F999 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				251DA57F1604BC480081F999 /* Sky.cpp */,
+				251DA5801604BC480081F999 /* Sky.h */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		8D14B55816035151004399C4 /* ReRunner */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,6 +582,7 @@
 		EACD248C15D81A6800453F75 /* lost */ = {
 			isa = PBXGroup;
 			children = (
+				251DA57E1604BC480081F999 /* Entities */,
 				254442B6160288A200D9D363 /* Animation.cpp */,
 				254442B9160288D200D9D363 /* Animation.h */,
 				EACD24A815D851AB00453F75 /* Bitmap.cpp */,
@@ -900,6 +914,7 @@
 				8DF375781603743900DA0547 /* texture.fs in Sources */,
 				8DF3757B1603743900DA0547 /* texture.vs in Sources */,
 				8DCEB31A160491D7002D6CB3 /* Animation.cpp in Sources */,
+				251DA5821604BC480081F999 /* Sky.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,6 +986,7 @@
 				8DF375761603743900DA0547 /* texture.fs in Sources */,
 				8DF375791603743900DA0547 /* texture.vs in Sources */,
 				254442B7160288A200D9D363 /* Animation.cpp in Sources */,
+				251DA5811604BC480081F999 /* Sky.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
