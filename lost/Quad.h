@@ -41,18 +41,25 @@ struct Quad : public Mesh
        TexturePtr tex,
        const vector<Rect>& pixelCoords,
        bool flip);
+    
+  Quad(const vector<Rect>& rects,
+       TexturePtr tex,
+       const vector<Rect>& pixelCoords,
+       bool flip,
+       int mod);
   
   void init(const vector<Rect>& rects,
             TexturePtr tex,
             const vector<Rect>& pixelCoords,
             bool flip);
-  
+
   static QuadPtr create() { return QuadPtr(new Quad()); }
   static QuadPtr create(const Rect& inRect) { return QuadPtr(new Quad(inRect)); }
   static QuadPtr create(const vector<Rect>& rects) { return QuadPtr(new Quad(rects)); }
   static QuadPtr create(const DataPtr& data, bool flip=true) { return QuadPtr(new Quad(data, flip)); }
   static QuadPtr create(const TexturePtr& tex, bool flip=true) { return QuadPtr(new Quad(tex, flip)); }
   static QuadPtr create(const TexturePtr& tex, const Rect& rect, bool flip=true) { return QuadPtr(new Quad(tex, rect, flip)); }
+  static QuadPtr create(const vector<Rect>& rects,TexturePtr tex,const vector<Rect>& pixelCoords) { return QuadPtr(new Quad(rects, tex, pixelCoords, true)); }
     
   virtual ~Quad();
   

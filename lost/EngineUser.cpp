@@ -19,7 +19,9 @@
 namespace lost 
 {
 
-  CameraPtr cam;
+  CameraPtr camPlayer1;
+  CameraPtr camPlayer2;
+  
   CanvasPtr canvas;
   CanvasObjectPtr coloredQuad;
   CanvasObjectPtr texturedQuad;
@@ -28,10 +30,16 @@ namespace lost
     
   ResourceBundle mainBundle;
   AnimationPtr anim;
+    
+  QuadPtr crazyQuad;
+  TexturePtr crazyQuadTexture;  
 
   void Engine::startup()
   {
-    cam = Camera2D::create(Rect(0,0,1024,768));
+    camPlayer1 = Camera2D::create(Rect(0,0,1024,384));
+    camPlayer2 = Camera2D::create(Rect(0,384,1024,384));
+    camPlayer2->projectionMatrix() = MatrixRotZ(180) * camPlayer2->projectionMatrix();
+    
     canvas = Canvas::create();
 
     rt2 = canvas->newText("This here is a relatively long text, that's hopefully gonna be rendered in multiple lines AND right aligned!",
@@ -46,18 +54,53 @@ namespace lost
 
     texturedQuad = canvas->newImage("resources/rings.png", 100, 100);
 
+    
+      
     anim.reset(new Animation(mainBundle));
     anim->load("resources/greenman2_0.png",64,64,15);
-    anim->getQuad()->transform = MatrixTranslation(Vec3(300,300,0));
-    anim->play(LOOP, 0.05);  
+      
+    anim->addAnimation("default", 0, 15);
+    anim->addAnimation("idle", 0, 5);
+      
+    anim->play("default",AP_LOOP, 0.05,true);
+      
+    //anim->showFrame(4);
+      
+    anim->getQuad()->transform = MatrixTranslation(Vec3(30,30,0));
+      
+      vector<Rect> rects;
+      Rect rect1(0,0,64,64);
+      rects.push_back(rect1);
+      
+      Rect rect2(0,0,64,64);
+      rects.push_back(rect2);
+      
+      
+      vector<Rect> pixelCoords;
+      Rect pc1(0,0,64,64);
+      pixelCoords.push_back(pc1);
+      
+      Rect pc2(128,128,64,64);
+      pixelCoords.push_back(pc2);
+      
+      crazyQuadTexture = mainBundle.loadTexture("resources/greenman2_0.png");
+      crazyQuad = Quad::create(rects,crazyQuadTexture,pixelCoords);
+      crazyQuad->material->shader = mainBundle.loadShader("resources/glsl/texture");
+      crazyQuad->material->color = whiteColor;
+      crazyQuad->material->blendNormal();
+      crazyQuad->transform = MatrixTranslation(Vec3(130,130,0));
+      
   }
 
   long timeElapsed = 0;
 
   void Engine::update(long deltaFrameTime)
   {
-    glContext->clearColor(blackColor);
-    glContext->camera(cam);
+    glContext->clearColor(redColor);
+    
+    //First Camera
+    glContext->camera(camPlayer1);
+      
     glContext->clear(GL_COLOR_BUFFER_BIT |GL_DEPTH_BUFFER_BIT);
     timeElapsed += deltaFrameTime;
     if (timeElapsed >= 500) {
@@ -65,9 +108,20 @@ namespace lost
       coloredQuad->isVisible = !coloredQuad->isVisible;
     }
     canvas->process(glContext);
-
+    
+    //Second Camera
+    glContext->camera(camPlayer2);
+    
     anim->update((double)deltaFrameTime/1000.0);
-    glContext->draw(anim->getQuad());
+      
+    glContext->draw(anim->getQuad());   
+    
+    crazyQuad->createIndices(0);
+    crazyQuad->transform = MatrixTranslation(Vec3(130,130,0));
+    glContext->draw(crazyQuad);   
+    crazyQuad->createIndices(1);
+    crazyQuad->transform = MatrixTranslation(Vec3(194,130,0));
+    glContext->draw(crazyQuad);   
   }
 
   void Engine::shutdown()

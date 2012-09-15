@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		254442B7160288A200D9D363 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254442B6160288A200D9D363 /* Animation.cpp */; };
 		8D14B50616029AD1004399C4 /* Canvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D14B50416029AD1004399C4 /* Canvas.cpp */; };
 		8D14B54F16035151004399C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D14B54E16035151004399C4 /* UIKit.framework */; };
 		8D14B55116035151004399C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D14B55016035151004399C4 /* Foundation.framework */; };
@@ -20,7 +21,6 @@
 		8D14B56716035151004399C4 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8D14B56616035151004399C4 /* Shader.vsh */; };
 		8D14B56A16035151004399C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D14B56916035151004399C4 /* ViewController.m */; };
 		8D14B56D16035151004399C4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D14B56B16035151004399C4 /* ViewController.xib */; };
-		254442B7160288A200D9D363 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254442B6160288A200D9D363 /* Animation.cpp */; };
 		EA0C315415FCDBFE00661552 /* ShaderPreprocessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C315215FCDBFE00661552 /* ShaderPreprocessor.cpp */; };
 		EA0C315815FCE86E00661552 /* StringAdditions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C315615FCDC0900661552 /* StringAdditions.cpp */; };
 		EA0C316415FD25A200661552 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA0C315E15FD25A100661552 /* Camera.cpp */; };
@@ -85,6 +85,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		254442B6160288A200D9D363 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
+		254442B9160288D200D9D363 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		8D14B50416029AD1004399C4 /* Canvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Canvas.cpp; sourceTree = "<group>"; };
 		8D14B50516029AD1004399C4 /* Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
 		8D14B54C16035151004399C4 /* ReRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,8 +106,6 @@
 		8D14B56816035151004399C4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8D14B56916035151004399C4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8D14B56C16035151004399C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		254442B6160288A200D9D363 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
-		254442B9160288D200D9D363 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		EA0C315215FCDBFE00661552 /* ShaderPreprocessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderPreprocessor.cpp; sourceTree = "<group>"; };
 		EA0C315315FCDBFE00661552 /* ShaderPreprocessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderPreprocessor.h; sourceTree = "<group>"; };
 		EA0C315615FCDC0900661552 /* StringAdditions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringAdditions.cpp; sourceTree = "<group>"; };
@@ -477,11 +477,11 @@
 				EACD24A215D825A600453F75 /* PlatformMac.mm */,
 				EACD249915D81E4400453F75 /* PlatformPaths.h */,
 				EACD249A15D81E4400453F75 /* PlatformThread.h */,
+				EAADB62B15FFABC4008F7450 /* Quad.cpp */,
+				EAADB62C15FFABC4008F7450 /* Quad.h */,
 				EACD249B15D81E4400453F75 /* PlatformTime.h */,
 				EACD249C15D81E4400453F75 /* PlatformType.h */,
 				EACD249315D81A6800453F75 /* prefix-shared.h */,
-				EAADB62B15FFABC4008F7450 /* Quad.cpp */,
-				EAADB62C15FFABC4008F7450 /* Quad.h */,
 				EAADB62E15FFB7DD008F7450 /* Range.h */,
 				EACD24AF15D852B300453F75 /* Rect.cpp */,
 				EACD24AC15D8528A00453F75 /* Rect.h */,
@@ -871,6 +871,7 @@
 				8D14B57016035151004399C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EACD242D15D7E48D00453F75 /* Build configuration list for PBXProject "LostEngine2" */ = {
 			isa = XCConfigurationList;

@@ -144,36 +144,37 @@ Quad::Quad(const vector<Rect>& rects,
 {
   this->init(rects, tex, pixelCoords, flip);
 }
-
+    
 void Quad::init(const vector<Rect>& rects,
-          TexturePtr tex,
-          const vector<Rect>& pixelCoords,
-          bool flip)
+                TexturePtr tex,
+                const vector<Rect>& pixelCoords,
+                bool flip)
 {
-  ASSERT(rects.size() == pixelCoords.size(), "number of rects and pixelCoords must match");
-  
-  BufferLayout layout;
-  layout.add(ET_vec2_f32, UT_position);
-  layout.add(ET_vec3_f32, UT_normal);
-  layout.add(ET_vec2_f32, UT_texcoord0);
-  this->resetBuffers(layout, ET_u16);
-  
-  indexBuffer->drawMode = GL_TRIANGLES;
-  this->material->textures.clear();
-  this->material->textures.push_back(tex);
-  size_t numQuads = rects.size();
-  size_t numVertices = numQuads*4;
-  size_t numIndices = numQuads*6;
-  
-  this->vertexBuffer->reset((uint32_t)numVertices);
-  this->indexBuffer->reset((uint32_t)numIndices);
-  
-  for(uint32_t i=0; i<numQuads; ++i)
-  {
-    createIndices(i);
-    createVertices(i, rects[i]);
-    createTexCoords(i, 0, pixelCoords[i], flip);
-  }
+    ASSERT(rects.size() == pixelCoords.size(), "number of rects and pixelCoords must match");
+    
+    BufferLayout layout;
+    layout.add(ET_vec2_f32, UT_position);
+    layout.add(ET_vec3_f32, UT_normal);
+    layout.add(ET_vec2_f32, UT_texcoord0);
+    this->resetBuffers(layout, ET_u16);
+    
+    indexBuffer->drawMode = GL_TRIANGLES;
+    this->material->textures.clear();
+    this->material->textures.push_back(tex);
+    size_t numQuads = rects.size();
+    size_t numVertices = numQuads*4;
+    size_t numIndices = 6;
+    
+    this->vertexBuffer->reset((uint32_t)numVertices);
+    this->indexBuffer->reset((uint32_t)numIndices);
+    
+    for(uint32_t i=0; i<numQuads; ++i)
+    {
+        createVertices(i, rects[i]);
+        createTexCoords(i, 0, pixelCoords[i], flip);
+    }
+    
+    createIndices(0);
 }
 
 Quad::~Quad()
@@ -182,17 +183,15 @@ Quad::~Quad()
 
 void Quad::createIndices(uint32_t quadNum)
 { 
-  const uint32_t numIndicesPerQuad = 6;
-  uint32_t indexOffset = quadNum*numIndicesPerQuad;
-  uint32_t vertexOffset = quadNum*4;
-  this->setIndex(indexOffset+0, vertexOffset + 0);
-  this->setIndex(indexOffset+1, vertexOffset + 1);
-  this->setIndex(indexOffset+2, vertexOffset + 2);
-  this->setIndex(indexOffset+3, vertexOffset + 2);
-  this->setIndex(indexOffset+4, vertexOffset + 3);
-  this->setIndex(indexOffset+5, vertexOffset + 0);    
+    uint32_t vertexOffset = quadNum*4;
+    this->setIndex(0, vertexOffset + 0);
+    this->setIndex(1, vertexOffset + 1);
+    this->setIndex(2, vertexOffset + 2);
+    this->setIndex(3, vertexOffset + 2);
+    this->setIndex(4, vertexOffset + 3);
+    this->setIndex(5, vertexOffset + 0);    
 }
-
+    
 void Quad::createVertices(uint32_t quadNum, const Rect& inRect)
 {
   uint32_t verticesPerQuad = 4;
