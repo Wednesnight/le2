@@ -23,7 +23,7 @@ private:
   MeshPtr mesh;
   std::list<CanvasObjectPtr> children;
 public:
-  bool isVisible;
+  bool isVisible, isEnabled;
   float x, y, xScale, yScale, rotation;
   
   CanvasObject();

@@ -8,6 +8,7 @@
 
 CanvasObject::CanvasObject() {
   isVisible = true;
+  isEnabled = true;
   x = 0;
   y = 0;
   xScale = 1;
@@ -18,6 +19,7 @@ CanvasObject::CanvasObject() {
 CanvasObject::CanvasObject(const MeshPtr& mesh)
 : mesh(mesh) {
   isVisible = true;
+  isEnabled = true;
   x = 0;
   y = 0;
   xScale = 1;
@@ -26,7 +28,7 @@ CanvasObject::CanvasObject(const MeshPtr& mesh)
 }
 
 void CanvasObject::process(Context* context) {
-  if (isVisible) {
+  if (isEnabled) {
     render(context);
     for (std::list<CanvasObjectPtr>::iterator idx = children.begin(); idx != children.end(); ++idx) {
       (*idx)->process(context);
@@ -35,7 +37,7 @@ void CanvasObject::process(Context* context) {
 }
 
 void CanvasObject::render(Context* context) {
-  if (mesh) {
+  if (isVisible && mesh) {
     mesh->transform = MatrixTranslation(Vec3(x, y, 0)) * MatrixScaling(Vec3(xScale, yScale, 1)) * MatrixRotation(Vec3(0, 0, rotation));
     context->draw(mesh);
   }
