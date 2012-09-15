@@ -16,7 +16,7 @@ struct Canvas;
 typedef shared_ptr<Canvas> CanvasPtr;
 
 struct CanvasObject {
-private:
+protected:
   MeshPtr mesh;
   vector<CanvasObjectPtr> children;
 public:
@@ -26,7 +26,7 @@ public:
   CanvasObject();
   CanvasObject(const MeshPtr& mesh);
 
-  void process(Context* context,Matrix _parentTransform = MatrixIdentity());
+  virtual void process(Context* context, double deltaTime, Matrix _parentTransform = MatrixIdentity());
   virtual void render(Context* context);
   
   void insert(CanvasObjectPtr& child);

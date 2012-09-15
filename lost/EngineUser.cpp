@@ -16,6 +16,8 @@
 #include "Canvas.h"
 #include "lost/Animation.h"
 
+#include "lost/Entities/Sky.h"
+
 namespace lost 
 {
 
@@ -35,6 +37,7 @@ namespace lost
   TexturePtr crazyQuadTexture;  
   
   CanvasObjectPtr tileLayer;
+  Sky sky;
 
   void Engine::startup()
   {
@@ -135,12 +138,12 @@ namespace lost
       timeElapsed = 0;
       coloredQuad->isVisible = !coloredQuad->isVisible;
     }
-    canvas->process(glContext);
+    canvas->process(glContext,deltaFrameTime);
     canvas->render(glContext);
     
     //Second Camera
     glContext->camera(camPlayer2);
-    canvas->process(glContext);
+    canvas->process(glContext, (double)deltaFrameTime / 1000.0);
     canvas->render(glContext);
     
     anim->update((double)deltaFrameTime/1000.0);
